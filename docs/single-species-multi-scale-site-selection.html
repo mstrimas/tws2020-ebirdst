@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Single Species, Multi-Scale Site Selection | NAOC 2020: eBird Status and Trends</title>
+  <meta name="description" content="Lessons for a workshop on accessing and using eBird Status and Trends data given at NAOC 2020" />
+  <meta name="generator" content="bookdown 0.20.1 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Single Species, Multi-Scale Site Selection | NAOC 2020: eBird Status and Trends" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lessons for a workshop on accessing and using eBird Status and Trends data given at NAOC 2020" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Single Species, Multi-Scale Site Selection | NAOC 2020: eBird Status and Trends" />
+  
+  <meta name="twitter:description" content="Lessons for a workshop on accessing and using eBird Status and Trends data given at NAOC 2020" />
+  
+
+<meta name="author" content="Matthew Strimas-Mackey, Tom Auer" />
+
+
+<meta name="date" content="2020-08-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="access.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">eBird Status and Trends</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#setup"><i class="fa fa-check"></i><b>0.1</b> Setup</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a><ul>
+<li class="chapter" data-level="1.1" data-path="access.html"><a href="access.html#objective"><i class="fa fa-check"></i><b>1.1</b> Objective</a></li>
+<li class="chapter" data-level="1.2" data-path="access.html"><a href="access.html#intro"><i class="fa fa-check"></i><b>1.2</b> Introduction</a></li>
+<li class="chapter" data-level="1.3" data-path="access.html"><a href="access.html#species"><i class="fa fa-check"></i><b>1.3</b> Species list</a></li>
+<li class="chapter" data-level="1.4" data-path="access.html"><a href="access.html#dl"><i class="fa fa-check"></i><b>1.4</b> Download data</a></li>
+<li class="chapter" data-level="1.5" data-path="access.html"><a href="access.html#load"><i class="fa fa-check"></i><b>1.5</b> Load data</a></li>
+<li class="chapter" data-level="1.6" data-path="access.html"><a href="access.html#map"><i class="fa fa-check"></i><b>1.6</b> Mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="single-species-multi-scale-site-selection.html"><a href="single-species-multi-scale-site-selection.html"><i class="fa fa-check"></i><b>2</b> Single Species, Multi-Scale Site Selection</a><ul>
+<li class="chapter" data-level="2.1" data-path="access.html"><a href="access.html#objective"><i class="fa fa-check"></i><b>2.1</b> Objective</a></li>
+<li class="chapter" data-level="2.2" data-path="access.html"><a href="access.html#intro"><i class="fa fa-check"></i><b>2.2</b> Introduction</a></li>
+<li class="chapter" data-level="2.3" data-path="single-species-multi-scale-site-selection.html"><a href="single-species-multi-scale-site-selection.html#seasonal"><i class="fa fa-check"></i><b>2.3</b> Seasonal abundance data</a></li>
+<li class="chapter" data-level="2.4" data-path="single-species-multi-scale-site-selection.html"><a href="single-species-multi-scale-site-selection.html#rangewide"><i class="fa fa-check"></i><b>2.4</b> Range-wide site selection</a></li>
+<li class="chapter" data-level="2.5" data-path="single-species-multi-scale-site-selection.html"><a href="single-species-multi-scale-site-selection.html#local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">NAOC 2020: eBird Status and Trends</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="single-species-multi-scale-site-selection" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Single Species, Multi-Scale Site Selection</h1>
+<div id="objective" class="section level2">
+<h2><span class="header-section-number">2.1</span> Objective</h2>
+<p>In this lesson, we’ll learn how to use eBird Status &amp; Trends data to identify important sites for Loggerhead Shrike during the breeding season at different spatial scales. This is an example of an analysis you might do to prioritize sites for a species, perhaps for conservation or management.</p>
+</div>
+<div id="intro" class="section level2">
+<h2><span class="header-section-number">2.2</span> Introduction</h2>
+<p>In the previous lesson, we saw how to download <a href="https://ebird.org/science/status-and-trends">eBird Status and Trends</a> data and load weekly estimates of relative abundance into R for further analysis. In this lesson, we’ll demonstrate one possible use case for these data: identifying sites of high importance for a species of conservation concern. Let’s start by loading the libraries we’ll need for this analysis.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="single-species-multi-scale-site-selection.html#cb13-1"></a><span class="kw">library</span>(ebirdst)</span>
+<span id="cb13-2"><a href="single-species-multi-scale-site-selection.html#cb13-2"></a><span class="kw">library</span>(raster)</span>
+<span id="cb13-3"><a href="single-species-multi-scale-site-selection.html#cb13-3"></a><span class="kw">library</span>(sf)</span>
+<span id="cb13-4"><a href="single-species-multi-scale-site-selection.html#cb13-4"></a><span class="kw">library</span>(rnaturalearth)</span>
+<span id="cb13-5"><a href="single-species-multi-scale-site-selection.html#cb13-5"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb13-6"><a href="single-species-multi-scale-site-selection.html#cb13-6"></a><span class="kw">library</span>(ggplot2)</span></code></pre></div>
+</div>
+<div id="seasonal" class="section level2">
+<h2><span class="header-section-number">2.3</span> Seasonal abundance data</h2>
+<p>For this site selection analysis we’ll be interested in identifying important sites for Loggerhead Shrike during the <strong>breeding</strong> season. Recall from the previous lesson, that Status and Trends data are provided as weekly estimates and we can access predefined seasonal boundary dates from the <code>ebirdst_runs</code> data frame.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="single-species-multi-scale-site-selection.html#cb14-1"></a>logshr_run &lt;-<span class="st"> </span><span class="kw">filter</span>(ebirdst_runs, common_name <span class="op">==</span><span class="st"> &quot;Loggerhead Shrike&quot;</span>)</span>
+<span id="cb14-2"><a href="single-species-multi-scale-site-selection.html#cb14-2"></a>start_dt &lt;-<span class="st"> </span>logshr_run<span class="op">$</span>breeding_start_dt</span>
+<span id="cb14-3"><a href="single-species-multi-scale-site-selection.html#cb14-3"></a>end_dt &lt;-<span class="st"> </span>logshr_run<span class="op">$</span>breeding_end_dt</span>
+<span id="cb14-4"><a href="single-species-multi-scale-site-selection.html#cb14-4"></a><span class="kw">c</span>(start_dt, end_dt)</span>
+<span id="cb14-5"><a href="single-species-multi-scale-site-selection.html#cb14-5"></a><span class="co">#&gt; [1] &quot;2018-05-17&quot; &quot;2018-06-21&quot;</span></span></code></pre></div>
+<p>We could subset the weekly relative abundance <code>RasterStack</code> to just the breeding season weeks, then average across the weeks. However, as a shortcut, the <code>ebirdst</code> package provides pre-calculated seasonal raster layers, which we can access with <code>load_raster()</code>.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="single-species-multi-scale-site-selection.html#cb15-1"></a><span class="co"># find the location of the data we downloaded in the previous lesson</span></span>
+<span id="cb15-2"><a href="single-species-multi-scale-site-selection.html#cb15-2"></a>sp_path &lt;-<span class="st"> </span><span class="kw">get_species_path</span>(<span class="st">&quot;Loggerhead Shrike&quot;</span>)</span>
+<span id="cb15-3"><a href="single-species-multi-scale-site-selection.html#cb15-3"></a><span class="co"># load the seasonal rasters</span></span>
+<span id="cb15-4"><a href="single-species-multi-scale-site-selection.html#cb15-4"></a>abd &lt;-<span class="st"> </span><span class="kw">load_raster</span>(<span class="st">&quot;abundance_seasonal&quot;</span>, sp_path)</span>
+<span id="cb15-5"><a href="single-species-multi-scale-site-selection.html#cb15-5"></a>abd</span>
+<span id="cb15-6"><a href="single-species-multi-scale-site-selection.html#cb15-6"></a><span class="co">#&gt; class      : RasterStack </span></span>
+<span id="cb15-7"><a href="single-species-multi-scale-site-selection.html#cb15-7"></a><span class="co">#&gt; dimensions : 5630, 7074, 39826620, 4  (nrow, ncol, ncell, nlayers)</span></span>
+<span id="cb15-8"><a href="single-species-multi-scale-site-selection.html#cb15-8"></a><span class="co">#&gt; resolution : 2963, 2963  (x, y)</span></span>
+<span id="cb15-9"><a href="single-species-multi-scale-site-selection.html#cb15-9"></a><span class="co">#&gt; extent     : -2e+07, 943785, -6673060, 1e+07  (xmin, xmax, ymin, ymax)</span></span>
+<span id="cb15-10"><a href="single-species-multi-scale-site-selection.html#cb15-10"></a><span class="co">#&gt; crs        : +proj=sinu +lon_0=0 +x_0=0 +y_0=0 +a=6371007.181 +b=6371007.181 +units=m +no_defs </span></span>
+<span id="cb15-11"><a href="single-species-multi-scale-site-selection.html#cb15-11"></a><span class="co">#&gt; names      : breeding, nonbreeding, postbreeding_migration, prebreeding_migration </span></span>
+<span id="cb15-12"><a href="single-species-multi-scale-site-selection.html#cb15-12"></a><span class="co">#&gt; min values :        0,           0,                      0,                     0 </span></span>
+<span id="cb15-13"><a href="single-species-multi-scale-site-selection.html#cb15-13"></a><span class="co">#&gt; max values :     1.90,        3.06,                   2.03,                  2.14</span></span>
+<span id="cb15-14"><a href="single-species-multi-scale-site-selection.html#cb15-14"></a><span class="co"># subset to just the breeding season</span></span>
+<span id="cb15-15"><a href="single-species-multi-scale-site-selection.html#cb15-15"></a>abd_breeding &lt;-<span class="st"> </span>abd[[<span class="st">&quot;breeding&quot;</span>]]</span>
+<span id="cb15-16"><a href="single-species-multi-scale-site-selection.html#cb15-16"></a>abd_breeding</span>
+<span id="cb15-17"><a href="single-species-multi-scale-site-selection.html#cb15-17"></a><span class="co">#&gt; class      : RasterLayer </span></span>
+<span id="cb15-18"><a href="single-species-multi-scale-site-selection.html#cb15-18"></a><span class="co">#&gt; dimensions : 5630, 7074, 39826620  (nrow, ncol, ncell)</span></span>
+<span id="cb15-19"><a href="single-species-multi-scale-site-selection.html#cb15-19"></a><span class="co">#&gt; resolution : 2963, 2963  (x, y)</span></span>
+<span id="cb15-20"><a href="single-species-multi-scale-site-selection.html#cb15-20"></a><span class="co">#&gt; extent     : -2e+07, 943785, -6673060, 1e+07  (xmin, xmax, ymin, ymax)</span></span>
+<span id="cb15-21"><a href="single-species-multi-scale-site-selection.html#cb15-21"></a><span class="co">#&gt; crs        : +proj=sinu +lon_0=0 +x_0=0 +y_0=0 +a=6371007.181 +b=6371007.181 +units=m +no_defs </span></span>
+<span id="cb15-22"><a href="single-species-multi-scale-site-selection.html#cb15-22"></a><span class="co">#&gt; source     : /Users/mes335/Library/Application Support/ebirdst/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13/results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_seasonal_breeding.tif </span></span>
+<span id="cb15-23"><a href="single-species-multi-scale-site-selection.html#cb15-23"></a><span class="co">#&gt; names      : breeding </span></span>
+<span id="cb15-24"><a href="single-species-multi-scale-site-selection.html#cb15-24"></a><span class="co">#&gt; values     : 0, 1.9  (min, max)</span></span></code></pre></div>
+<p>This layer represents the expected relative abundance of Loggerhead Shrike during the breeding season on an eBird Traveling Count by a skilled eBirder starting at the optimal time of day with the optimal search duration and distance that maximizes detection of this species in a region.</p>
+<p>Let’s crop and re-project based on the species specific map parameters.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="single-species-multi-scale-site-selection.html#cb16-1"></a><span class="co"># load mapping parameters</span></span>
+<span id="cb16-2"><a href="single-species-multi-scale-site-selection.html#cb16-2"></a>map_pars &lt;-<span class="st"> </span>ebirdst<span class="op">::</span><span class="kw">load_fac_map_parameters</span>(sp_path)</span>
+<span id="cb16-3"><a href="single-species-multi-scale-site-selection.html#cb16-3"></a></span>
+<span id="cb16-4"><a href="single-species-multi-scale-site-selection.html#cb16-4"></a><span class="co"># crop and reproject abundance raster</span></span>
+<span id="cb16-5"><a href="single-species-multi-scale-site-selection.html#cb16-5"></a>abd_breeding_proj &lt;-<span class="st"> </span>abd_breeding <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb16-6"><a href="single-species-multi-scale-site-selection.html#cb16-6"></a><span class="st">  </span><span class="kw">crop</span>(map_pars<span class="op">$</span>fa_extent_sinu) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb16-7"><a href="single-species-multi-scale-site-selection.html#cb16-7"></a><span class="st">  </span><span class="kw">projectRaster</span>(<span class="dt">crs =</span> map_pars<span class="op">$</span>custom_projection)</span></code></pre></div>
+</div>
+<div id="rangewide" class="section level2">
+<h2><span class="header-section-number">2.4</span> Range-wide site selection</h2>
+<p>To perform a range-wide site selection, we’ll identify the locations with the top 5% of non-zero abundance values across the entire range and visualize those locations. Let’s start by cleaning up this raster a little more by removing cells with zero abundance and further trimming the extent to just the area of non-zero breeding season abundance.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="single-species-multi-scale-site-selection.html#cb17-1"></a><span class="co"># remove zeroes prior to calculating quantiles</span></span>
+<span id="cb17-2"><a href="single-species-multi-scale-site-selection.html#cb17-2"></a>abd_breeding_proj[abd_breeding_proj <span class="op">==</span><span class="st"> </span><span class="dv">0</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></span>
+<span id="cb17-3"><a href="single-species-multi-scale-site-selection.html#cb17-3"></a><span class="co"># trim </span></span>
+<span id="cb17-4"><a href="single-species-multi-scale-site-selection.html#cb17-4"></a>abd_nonzero &lt;-<span class="st"> </span><span class="kw">trim</span>(abd_breeding_proj)</span></code></pre></div>
+<p>New we can calculate the 95th quantile and use it to identify the top 5% of cells.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="single-species-multi-scale-site-selection.html#cb18-1"></a><span class="co"># calculate the 95th quantile</span></span>
+<span id="cb18-2"><a href="single-species-multi-scale-site-selection.html#cb18-2"></a>q95 &lt;-<span class="st"> </span><span class="kw">quantile</span>(abd_nonzero, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>, <span class="dt">probs =</span> <span class="fl">0.95</span>)</span>
+<span id="cb18-3"><a href="single-species-multi-scale-site-selection.html#cb18-3"></a><span class="co"># identify top 5% of cells</span></span>
+<span id="cb18-4"><a href="single-species-multi-scale-site-selection.html#cb18-4"></a>abd_top5 &lt;-<span class="st"> </span>abd_nonzero <span class="op">&gt;=</span><span class="st"> </span>q95</span></code></pre></div>
+<p>Finally let’s map these selected sites.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="single-species-multi-scale-site-selection.html#cb19-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>))</span>
+<span id="cb19-2"><a href="single-species-multi-scale-site-selection.html#cb19-2"></a><span class="kw">plot</span>(abd_top5, <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&#39;#d9d9d9&#39;</span>, <span class="st">&#39;#fd8d3c&#39;</span>), </span>
+<span id="cb19-3"><a href="single-species-multi-scale-site-selection.html#cb19-3"></a>     <span class="dt">axes =</span> <span class="ot">FALSE</span>, <span class="dt">box =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb19-4"><a href="single-species-multi-scale-site-selection.html#cb19-4"></a>     <span class="dt">maxpixels =</span> <span class="kw">ncell</span>(abd_top5))</span></code></pre></div>
+<p><img src="naoc2020-ebirdst_files/figure-html/rangewide-map-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+</div>
+<div id="local" class="section level2">
+<h2><span class="header-section-number">2.5</span> Local Selection</h2>
+<p>If you intend to use these abundance rasters at a very local scale, it’s important to be cautious because of the broad spatial scale at which the modeling was conducted. For example, let’s consider just the data from Louisiana. To start, we’ll get boundary data of Louisiana.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="single-species-multi-scale-site-selection.html#cb20-1"></a><span class="co"># get spatial boundary for louisiana, project lousiana to sinusoidal</span></span>
+<span id="cb20-2"><a href="single-species-multi-scale-site-selection.html#cb20-2"></a>la &lt;-<span class="st"> </span><span class="kw">ne_states</span>(<span class="dt">iso_a2 =</span> <span class="st">&quot;US&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb20-3"><a href="single-species-multi-scale-site-selection.html#cb20-3"></a><span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Louisiana&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb20-4"><a href="single-species-multi-scale-site-selection.html#cb20-4"></a><span class="st">  </span><span class="kw">st_transform</span>(<span class="dt">crs =</span> <span class="kw">st_crs</span>(abd_breeding))</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="single-species-multi-scale-site-selection.html#cb21-1"></a><span class="co"># load the upper and lower confidence intervals</span></span>
+<span id="cb21-2"><a href="single-species-multi-scale-site-selection.html#cb21-2"></a>abd_upper &lt;-<span class="st"> </span><span class="kw">load_raster</span>(<span class="st">&quot;abundance_upper&quot;</span>, <span class="dt">path =</span> sp_path)</span>
+<span id="cb21-3"><a href="single-species-multi-scale-site-selection.html#cb21-3"></a>abd_lower &lt;-<span class="st"> </span><span class="kw">load_raster</span>(<span class="st">&quot;abundance_lower&quot;</span>, <span class="dt">path =</span> sp_path)</span>
+<span id="cb21-4"><a href="single-species-multi-scale-site-selection.html#cb21-4"></a></span>
+<span id="cb21-5"><a href="single-species-multi-scale-site-selection.html#cb21-5"></a><span class="co"># subset to breeding season</span></span>
+<span id="cb21-6"><a href="single-species-multi-scale-site-selection.html#cb21-6"></a>la_breeding_season &lt;-<span class="st"> </span><span class="kw">ebirdst_extent</span>(la, </span>
+<span id="cb21-7"><a href="single-species-multi-scale-site-selection.html#cb21-7"></a>                                     <span class="kw">c</span>(logshr_run<span class="op">$</span>breeding_start_dt,</span>
+<span id="cb21-8"><a href="single-species-multi-scale-site-selection.html#cb21-8"></a>                                       logshr_run<span class="op">$</span>breeding_end_dt))</span>
+<span id="cb21-9"><a href="single-species-multi-scale-site-selection.html#cb21-9"></a>abd_upper_br &lt;-<span class="st"> </span><span class="kw">ebirdst_subset</span>(abd_upper, la_breeding_season)</span>
+<span id="cb21-10"><a href="single-species-multi-scale-site-selection.html#cb21-10"></a>abd_lower_br &lt;-<span class="st"> </span><span class="kw">ebirdst_subset</span>(abd_lower, la_breeding_season)</span>
+<span id="cb21-11"><a href="single-species-multi-scale-site-selection.html#cb21-11"></a></span>
+<span id="cb21-12"><a href="single-species-multi-scale-site-selection.html#cb21-12"></a><span class="co"># average for the breeding season</span></span>
+<span id="cb21-13"><a href="single-species-multi-scale-site-selection.html#cb21-13"></a>abd_upper_br_avg &lt;-<span class="st"> </span><span class="kw">calc</span>(abd_upper_br, <span class="dt">fun =</span> mean, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb21-14"><a href="single-species-multi-scale-site-selection.html#cb21-14"></a>abd_lower_br_avg &lt;-<span class="st"> </span><span class="kw">calc</span>(abd_lower_br, <span class="dt">fun =</span> mean, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb21-15"><a href="single-species-multi-scale-site-selection.html#cb21-15"></a></span>
+<span id="cb21-16"><a href="single-species-multi-scale-site-selection.html#cb21-16"></a><span class="co"># set some points in the northern part  of the state</span></span>
+<span id="cb21-17"><a href="single-species-multi-scale-site-selection.html#cb21-17"></a>high_pt1 &lt;-<span class="st"> </span><span class="kw">st_point</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">92.1081</span>, <span class="fl">32.2624</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb21-18"><a href="single-species-multi-scale-site-selection.html#cb21-18"></a><span class="st">  </span><span class="kw">st_sfc</span>(<span class="dt">crs =</span> <span class="dv">4326</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb21-19"><a href="single-species-multi-scale-site-selection.html#cb21-19"></a><span class="st">  </span><span class="kw">st_transform</span>(<span class="dt">crs =</span> <span class="kw">projection</span>(abd_breeding))</span>
+<span id="cb21-20"><a href="single-species-multi-scale-site-selection.html#cb21-20"></a>high_pt2 &lt;-<span class="st"> </span><span class="kw">st_point</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">92.0777</span>, <span class="fl">32.2624</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb21-21"><a href="single-species-multi-scale-site-selection.html#cb21-21"></a><span class="st">  </span><span class="kw">st_sfc</span>(<span class="dt">crs =</span> <span class="dv">4326</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb21-22"><a href="single-species-multi-scale-site-selection.html#cb21-22"></a><span class="st">  </span><span class="kw">st_transform</span>(<span class="dt">crs =</span> <span class="kw">projection</span>(abd_breeding))</span>
+<span id="cb21-23"><a href="single-species-multi-scale-site-selection.html#cb21-23"></a>low_pt &lt;-<span class="st"> </span><span class="kw">st_point</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">92.1336</span>, <span class="fl">32.2882</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb21-24"><a href="single-species-multi-scale-site-selection.html#cb21-24"></a><span class="st">  </span><span class="kw">st_sfc</span>(<span class="dt">crs =</span> <span class="dv">4326</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb21-25"><a href="single-species-multi-scale-site-selection.html#cb21-25"></a><span class="st">  </span><span class="kw">st_transform</span>(<span class="dt">crs =</span> <span class="kw">projection</span>(abd_breeding))</span>
+<span id="cb21-26"><a href="single-species-multi-scale-site-selection.html#cb21-26"></a></span>
+<span id="cb21-27"><a href="single-species-multi-scale-site-selection.html#cb21-27"></a><span class="co"># combine points</span></span>
+<span id="cb21-28"><a href="single-species-multi-scale-site-selection.html#cb21-28"></a>all_pts &lt;-<span class="st"> </span><span class="kw">st_union</span>(<span class="kw">st_union</span>(high_pt1, high_pt2), low_pt)</span>
+<span id="cb21-29"><a href="single-species-multi-scale-site-selection.html#cb21-29"></a></span>
+<span id="cb21-30"><a href="single-species-multi-scale-site-selection.html#cb21-30"></a><span class="co"># overview map</span></span>
+<span id="cb21-31"><a href="single-species-multi-scale-site-selection.html#cb21-31"></a>all_pts_proj &lt;-<span class="st"> </span><span class="kw">st_transform</span>(all_pts, <span class="dt">crs =</span> <span class="kw">st_crs</span>(map_pars<span class="op">$</span>custom_projection))</span>
+<span id="cb21-32"><a href="single-species-multi-scale-site-selection.html#cb21-32"></a><span class="kw">plot</span>(abd_breeding_proj, </span>
+<span id="cb21-33"><a href="single-species-multi-scale-site-selection.html#cb21-33"></a>     <span class="dt">maxpixels =</span> <span class="kw">ncell</span>(abd_breeding_proj), <span class="dt">box =</span> <span class="ot">FALSE</span>, </span>
+<span id="cb21-34"><a href="single-species-multi-scale-site-selection.html#cb21-34"></a>     <span class="co">#breaks = c(0, quarters, maxValue(abd_breeding_proj)), axes = FALSE, </span></span>
+<span id="cb21-35"><a href="single-species-multi-scale-site-selection.html#cb21-35"></a>     <span class="dt">col =</span> <span class="kw">abundance_palette</span>(<span class="dv">4</span>, <span class="dt">season =</span> <span class="st">&quot;weekly&quot;</span>), </span>
+<span id="cb21-36"><a href="single-species-multi-scale-site-selection.html#cb21-36"></a>     <span class="dt">ext =</span> <span class="kw">extent</span>(<span class="kw">as</span>(<span class="kw">st_buffer</span>(all_pts_proj, <span class="dv">105000</span>), <span class="st">&#39;Spatial&#39;</span>)), <span class="dt">alpha =</span> <span class="fl">0.5</span>)</span>
+<span id="cb21-37"><a href="single-species-multi-scale-site-selection.html#cb21-37"></a><span class="kw">plot</span>(<span class="kw">st_geometry</span>(la <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_transform</span>(<span class="dt">crs =</span> map_pars<span class="op">$</span>custom_projection)), <span class="dt">add =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb21-38"><a href="single-species-multi-scale-site-selection.html#cb21-38"></a><span class="kw">plot</span>(all_pts_proj, <span class="dt">add =</span> <span class="ot">TRUE</span>, <span class="dt">col =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">cex =</span> <span class="dv">2</span>, <span class="dt">pch =</span> <span class="dv">21</span>, <span class="dt">bg =</span> <span class="st">&#39;red&#39;</span>)</span>
+<span id="cb21-39"><a href="single-species-multi-scale-site-selection.html#cb21-39"></a></span>
+<span id="cb21-40"><a href="single-species-multi-scale-site-selection.html#cb21-40"></a><span class="co"># plot points on top of the individual raster cells</span></span>
+<span id="cb21-41"><a href="single-species-multi-scale-site-selection.html#cb21-41"></a><span class="kw">plot</span>(abd_breeding_proj, <span class="dt">ext =</span> <span class="kw">extent</span>(<span class="kw">as</span>(<span class="kw">st_buffer</span>(all_pts_proj, <span class="dv">10000</span>), <span class="st">&#39;Spatial&#39;</span>)), </span>
+<span id="cb21-42"><a href="single-species-multi-scale-site-selection.html#cb21-42"></a>     <span class="dt">box =</span> <span class="ot">FALSE</span>, <span class="dt">col =</span> <span class="kw">abundance_palette</span>(<span class="dv">100</span>, <span class="dt">season =</span> <span class="st">&quot;weekly&quot;</span>), <span class="dt">axes =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb21-43"><a href="single-species-multi-scale-site-selection.html#cb21-43"></a><span class="kw">plot</span>(all_pts_proj, <span class="dt">add =</span> <span class="ot">TRUE</span>, <span class="dt">pch =</span> <span class="dv">21</span>, <span class="dt">cex =</span> <span class="fl">2.5</span>, <span class="dt">col =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">bg =</span> <span class="st">&#39;red&#39;</span>)</span>
+<span id="cb21-44"><a href="single-species-multi-scale-site-selection.html#cb21-44"></a></span>
+<span id="cb21-45"><a href="single-species-multi-scale-site-selection.html#cb21-45"></a><span class="co"># convert points to coordinates for extraction</span></span>
+<span id="cb21-46"><a href="single-species-multi-scale-site-selection.html#cb21-46"></a>high_pt1 &lt;-<span class="st"> </span><span class="kw">st_coordinates</span>(high_pt1)</span>
+<span id="cb21-47"><a href="single-species-multi-scale-site-selection.html#cb21-47"></a>high_pt2 &lt;-<span class="st"> </span><span class="kw">st_coordinates</span>(high_pt2)</span>
+<span id="cb21-48"><a href="single-species-multi-scale-site-selection.html#cb21-48"></a>low_pt &lt;-<span class="st"> </span><span class="kw">st_coordinates</span>(low_pt)</span>
+<span id="cb21-49"><a href="single-species-multi-scale-site-selection.html#cb21-49"></a></span>
+<span id="cb21-50"><a href="single-species-multi-scale-site-selection.html#cb21-50"></a><span class="co"># extract</span></span>
+<span id="cb21-51"><a href="single-species-multi-scale-site-selection.html#cb21-51"></a>abund_hpt1 &lt;-<span class="st"> </span><span class="kw">extract</span>(abd_breeding, high_pt1, <span class="dt">method =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb21-52"><a href="single-species-multi-scale-site-selection.html#cb21-52"></a>upper_hpt1 &lt;-<span class="st"> </span><span class="kw">extract</span>(abd_upper_br_avg, high_pt1, <span class="dt">method =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb21-53"><a href="single-species-multi-scale-site-selection.html#cb21-53"></a>lower_hpt1 &lt;-<span class="st"> </span><span class="kw">extract</span>(abd_lower_br_avg, high_pt1, <span class="dt">method =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb21-54"><a href="single-species-multi-scale-site-selection.html#cb21-54"></a></span>
+<span id="cb21-55"><a href="single-species-multi-scale-site-selection.html#cb21-55"></a>abund_hpt2 &lt;-<span class="st"> </span><span class="kw">extract</span>(abd_breeding, high_pt2, <span class="dt">method =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb21-56"><a href="single-species-multi-scale-site-selection.html#cb21-56"></a>upper_hpt2 &lt;-<span class="st"> </span><span class="kw">extract</span>(abd_upper_br_avg, high_pt2, <span class="dt">method =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb21-57"><a href="single-species-multi-scale-site-selection.html#cb21-57"></a>lower_hpt2 &lt;-<span class="st"> </span><span class="kw">extract</span>(abd_lower_br_avg, high_pt2, <span class="dt">method =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb21-58"><a href="single-species-multi-scale-site-selection.html#cb21-58"></a></span>
+<span id="cb21-59"><a href="single-species-multi-scale-site-selection.html#cb21-59"></a>abund_lpt1 &lt;-<span class="st"> </span><span class="kw">extract</span>(abd_breeding, low_pt, <span class="dt">method =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb21-60"><a href="single-species-multi-scale-site-selection.html#cb21-60"></a>upper_lpt1 &lt;-<span class="st"> </span><span class="kw">extract</span>(abd_upper_br_avg, low_pt, <span class="dt">method =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb21-61"><a href="single-species-multi-scale-site-selection.html#cb21-61"></a>lower_lpt1 &lt;-<span class="st"> </span><span class="kw">extract</span>(abd_lower_br_avg, low_pt, <span class="dt">method =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb21-62"><a href="single-species-multi-scale-site-selection.html#cb21-62"></a></span>
+<span id="cb21-63"><a href="single-species-multi-scale-site-selection.html#cb21-63"></a><span class="co"># create data frame</span></span>
+<span id="cb21-64"><a href="single-species-multi-scale-site-selection.html#cb21-64"></a>pts_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">middle =</span> <span class="kw">c</span>(abund_hpt1, abund_hpt2, abund_lpt1),</span>
+<span id="cb21-65"><a href="single-species-multi-scale-site-selection.html#cb21-65"></a>                     <span class="dt">upper =</span> <span class="kw">c</span>(upper_hpt1, upper_hpt2, upper_lpt1),</span>
+<span id="cb21-66"><a href="single-species-multi-scale-site-selection.html#cb21-66"></a>                     <span class="dt">lower =</span> <span class="kw">c</span>(lower_hpt1, lower_hpt2, lower_lpt1),</span>
+<span id="cb21-67"><a href="single-species-multi-scale-site-selection.html#cb21-67"></a>                     <span class="dt">label =</span> <span class="kw">c</span>(<span class="st">&quot;High Point 1&quot;</span>, <span class="st">&quot;High Point 2&quot;</span>, <span class="st">&quot;Lower Point&quot;</span>))</span>
+<span id="cb21-68"><a href="single-species-multi-scale-site-selection.html#cb21-68"></a></span>
+<span id="cb21-69"><a href="single-species-multi-scale-site-selection.html#cb21-69"></a><span class="co"># plot the confidence intervals for the three points</span></span>
+<span id="cb21-70"><a href="single-species-multi-scale-site-selection.html#cb21-70"></a>p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(pts_df, <span class="kw">aes</span>(<span class="dt">y =</span> middle, <span class="dt">x =</span> label))</span>
+<span id="cb21-71"><a href="single-species-multi-scale-site-selection.html#cb21-71"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymax =</span> upper, <span class="dt">ymin =</span> lower))</span></code></pre></div>
+<p><img src="naoc2020-ebirdst_files/figure-html/unnamed-chunk-5-1.png" width="\textwidth" style="display: block; margin: auto;" /><img src="naoc2020-ebirdst_files/figure-html/unnamed-chunk-5-2.png" width="\textwidth" style="display: block; margin: auto;" /><img src="naoc2020-ebirdst_files/figure-html/unnamed-chunk-5-3.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="access.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

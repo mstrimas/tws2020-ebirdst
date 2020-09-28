@@ -1,0 +1,113 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+# Data Access {#access}
+
+## Objective {#objective}
+
+To download eBird Status & Trends data using the R package [`ebirdst`](https://cornelllabofornithology.github.io/ebirdst/), load those data into R and make a simple map.
+
+## Introduction {#intro}
+
+[eBird Status and Trends](https://ebird.org/science/status-and-trends) provides modeled estimates of the distribution and relative abundance of 610 North American breeding bird species over their full annual cycle at high spatial and temporal resolution. All the data behind the maps you've likely seen online are freely and openly available, hosted by the [Registry of Open Data on AWS](https://registry.opendata.aws/ebirdst/). In addition to being able to download the data from AWS, we maintain the `ebirdst` R package for easily accessing and working with these data. In this lesson, we'll show you how to access these data and load them into your R session.
+
+Let's start by loading the `ebirdst` R package and some additional packages for working with the data.
+
+```{r access-libraries}
+library(ebirdst)
+library(raster)
+library(dplyr)
+```
+
+## Species list {#species}
+
+The `ebirdst_runs` object is a data frame listing all the available species.
+
+```{r species}
+glimpse(ebirdst_runs)
+```
+
+If you're working in RStudio, you can use `View()` to interactively explore this data frame. You can also consult the [Status and Trends](https://ebird.org/science/status-and-trends) landing page to see the full list of species.
+
+These seasonal dates are defined through a process of expert review of the weekly Status and Trends maps and define the start and end weeks of each of the following seasons: breeding, non-breeding, pre-breeding migration, and post-breeding migration. If dates are missing for a given season, it means the species did not pass the review process for that season.
+
+## Download data {#dl}
+
+The function `ebirdst_download()` downloads data for a single species from AWS. All you need to do is provide the name (common name, scientific name, or species code) of the species you want to download. For this example, I'll download the data for Loggerhead Shrike.
+
+```{r dl-dl, eval = FALSE}
+sp_path <- ebirdst_download(species = "Loggerhead Shrike")
+sp_path
+```
+
+```{r dl-setpath, echo = FALSE}
+sp_path <- get_species_path("logshr")
+sp_path
+```
+
+The function will automatically identify a suitable location to store the downloaded data and return that path, which we captured in the variable `sp_path`. By default, `ebirdst_download()` downloads just the raster predictions from Status and Trends for relative occurrence, count, and abundance. We can see the files downloaded with:
+
+```{r dl-ls}
+list.files(sp_path, recursive = TRUE)
+```
+
+There are some additional files that can be downloaded by specifying `tifs_only = FALSE`, which may be useful for certain applications. For further details on these data consult the associated `ebirdst` [vignette](https://cornelllabofornithology.github.io/ebirdst/articles/ebirdst-non-raster.html).
+
+```{r dl-all}
+sp_path <- ebirdst_download(species = "logshr", tifs_only = FALSE)
+```
+
+## Load data {#load}
+
+Now that we've downloaded the data, let's load these data into our R session. These are raster data (i.e. estimates are provided over a regular grid) and therefore we'll need the `raster` package (loaded above) to work with them. There are a variety of layers available, but let's load the relative abundance estimates. To learn about some of the other layers, consult the [associated vignette](https://cornelllabofornithology.github.io/ebirdst/articles/ebirdst-introduction.html#raster-data-1) from the `ebirdst` package.
+
+```{r load-abd}
+abd <- load_raster(product = "abundance", path = sp_path)
+abd
+```
+
+This is a `RasterStack` object with 52 layers, each providing a relative abundance estimate for a single week of the year. To see the dates corresponding to the midpoint of these weeks, use:
+
+```{r load-dates}
+parse_raster_dates(abd)
+```
+
+For a given week, these data consist of estimates of relative abundance over a regular 2.96 km grid. For example, we can extract just the 20th week (centered on May 17, 2018) with:
+
+```{r load-one}
+abd[[20]]
+```
+
+## Mapping {#map}
+
+Let's map a quick map of the May 17 abundance data to see what it looks like. The function `abundance_palette()` gives us access to the color palettes used in the online versions of the maps.
+
+```{r map-simple}
+par(mar = c(0, 0, 0, 0))
+plot(abd[[20]], axes = FALSE, box = FALSE,
+     col = abundance_palette(100, season = "weekly"), 
+     maxpixels = ncell(abd))
+```
+
+Notice the extreme distortion in the continents, that most of this map is taken up by areas where the species doesn't occur, and that there isn't much resolution in the color palette in areas where it does occur. These raster layers are provided for the entire Western Hemisphere in a sinusoidal equal area projection. This format ensures consistency across the full set of Status and Trends species, but isn't ideal for mapping the data for a single species. To address this, each Status and Trends data package comes with a set of parameters suitable for mapping the data for that species. Let's reproduce the above map using the provided extent, projection, and legend bins.
+
+```{r map-pars}
+# load mapping parameters
+map_pars <- load_fac_map_parameters(sp_path)
+
+# crop and reproject abundance raster
+abd_proj <- abd[[20]] %>% 
+  crop(map_pars$fa_extent_sinu) %>% 
+  projectRaster(crs = map_pars$custom_projection, method = "ngb")
+
+# map
+par(mar = c(0, 0, 0, 0))
+pal <- abundance_palette(length(map_pars$abundance_bins), season = "weekly")
+plot(abd_proj, 
+     breaks = c(0, map_pars$abundance_bins), 
+     col = c("#e6e6e6", pal), 
+     axes = FALSE, box = FALSE,
+     maxpixels = ncell(abd_proj))
+```

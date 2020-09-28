@@ -1,0 +1,25 @@
+--- 
+title: "TWS 2020: eBird Status and Trends"
+author: "Matthew Strimas-Mackey and Orin Robinson"
+date: "2020-08-10"
+site: bookdown::bookdown_site
+documentclass: book
+description: "Lessons for a workshop on accessing and using eBird Status and Trends data given at TWS 2020"
+---
+
+# Welcome {-}
+
+The community science project [eBird](https://ebird.org/home) has generated a database of over 800 million bird observations, with broad spatial and taxonomic coverage. Over the past 10 years, the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/home/) has developed machine-learning models using eBird and remotely-sensed data to produce high resolution, weekly estimates of range boundaries, occurrence rate, and relative abundance while accounting for many of the biases inherent in community science datasets, including variation in observer behavior and effort. Visualizations and modeled data products for 610 North American breeding birds, including resident and non-breeding grounds in South America, are currently available on the [eBird Status and Trends website](https://ebird.org/science/status-and-trends).
+
+This workshop will introduce attendees to the modeled data products (weekly estimates of range boundaries, occurrence rate, and relative abundance) and the `ebirdst` R package developed specifically for working with these data. This will include an introduction to the modeling process used to generate the eBird Status and Trends data products. It will also include a demonstration of how to access and manipulate these data products for specific combinations of species, seasons, and regions using the `ebirdst` package. After the workshop, attendees will have an understanding of how and when to use these data products for applied research and conservation efforts, including within-year dynamics. Some experience with R will be helpful in following along with the demonstration. Please note, this workshop will not cover the analysis of trends or trend data.
+
+## Setup
+
+To run the code in the workshop you'll need to install the following packages:
+
+```{r eval=FALSE}
+install.packages(c("tidyverse", "raster", "sf", "ebirdst", "rnaturalearth", "rgeos", "remotes"))
+remotes::install_github("ropensci/rnaturalearthhires")
+```
+
+To download the source files and following along with this workshop visit the [GitHub repository](https://github.com/mstrimas/naoc2020-ebirdst/).

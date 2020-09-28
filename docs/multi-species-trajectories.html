@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lesson 3 Multi-species Trajectories | TWS 2020: eBird Status and Trends</title>
+  <meta name="description" content="Lessons for a workshop on accessing and using eBird Status and Trends data given at TWS 2020" />
+  <meta name="generator" content="bookdown 0.20.1 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lesson 3 Multi-species Trajectories | TWS 2020: eBird Status and Trends" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lessons for a workshop on accessing and using eBird Status and Trends data given at TWS 2020" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lesson 3 Multi-species Trajectories | TWS 2020: eBird Status and Trends" />
+  
+  <meta name="twitter:description" content="Lessons for a workshop on accessing and using eBird Status and Trends data given at TWS 2020" />
+  
+
+<meta name="author" content="Matthew Strimas-Mackey and Orin Robinson" />
+
+
+<meta name="date" content="2020-08-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="site-selection.html"/>
+<link rel="next" href="non-raster-data.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">eBird Status and Trends</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#setup"><i class="fa fa-check"></i><b>0.1</b> Setup</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a><ul>
+<li class="chapter" data-level="1.1" data-path="access.html"><a href="access.html#objective"><i class="fa fa-check"></i><b>1.1</b> Objective</a></li>
+<li class="chapter" data-level="1.2" data-path="access.html"><a href="access.html#intro"><i class="fa fa-check"></i><b>1.2</b> Introduction</a></li>
+<li class="chapter" data-level="1.3" data-path="access.html"><a href="access.html#species"><i class="fa fa-check"></i><b>1.3</b> Species list</a></li>
+<li class="chapter" data-level="1.4" data-path="access.html"><a href="access.html#dl"><i class="fa fa-check"></i><b>1.4</b> Download data</a></li>
+<li class="chapter" data-level="1.5" data-path="access.html"><a href="access.html#load"><i class="fa fa-check"></i><b>1.5</b> Load data</a></li>
+<li class="chapter" data-level="1.6" data-path="access.html"><a href="access.html#map"><i class="fa fa-check"></i><b>1.6</b> Mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a><ul>
+<li class="chapter" data-level="2.1" data-path="site-selection.html"><a href="site-selection.html#site-objective"><i class="fa fa-check"></i><b>2.1</b> Objective</a></li>
+<li class="chapter" data-level="2.2" data-path="site-selection.html"><a href="site-selection.html#site-intro"><i class="fa fa-check"></i><b>2.2</b> Introduction</a></li>
+<li class="chapter" data-level="2.3" data-path="site-selection.html"><a href="site-selection.html#site-seasonal"><i class="fa fa-check"></i><b>2.3</b> Seasonal abundance data</a></li>
+<li class="chapter" data-level="2.4" data-path="site-selection.html"><a href="site-selection.html#site-rangewide"><i class="fa fa-check"></i><b>2.4</b> Range-wide site selection</a></li>
+<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="site-selection.html"><a href="site-selection.html#site-local-uncertainty"><i class="fa fa-check"></i><b>2.5.1</b> Uncertainty analysis</a></li>
+<li class="chapter" data-level="2.5.2" data-path="site-selection.html"><a href="site-selection.html#ground-truth"><i class="fa fa-check"></i><b>2.5.2</b> Ground truth</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a><ul>
+<li class="chapter" data-level="3.1" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-objective"><i class="fa fa-check"></i><b>3.1</b> Objective</a></li>
+<li class="chapter" data-level="3.2" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-intro"><i class="fa fa-check"></i><b>3.2</b> Introduction</a></li>
+<li class="chapter" data-level="3.3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-data"><i class="fa fa-check"></i><b>3.3</b> Multi-species data</a></li>
+<li class="chapter" data-level="3.4" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-pop"><i class="fa fa-check"></i><b>3.4</b> Proportion of population</a></li>
+<li class="chapter" data-level="3.5" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-traj"><i class="fa fa-check"></i><b>3.5</b> Trajectories</a></li>
+<li class="chapter" data-level="3.6" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-rich"><i class="fa fa-check"></i><b>3.6</b> Richness</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a><ul>
+<li class="chapter" data-level="4.1" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-objective"><i class="fa fa-check"></i><b>4.1</b> Objective</a></li>
+<li class="chapter" data-level="4.2" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-intro"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
+<li class="chapter" data-level="4.3" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-effext"><i class="fa fa-check"></i><b>4.3</b> Effective extent</a></li>
+<li class="chapter" data-level="4.4" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-ppms"><i class="fa fa-check"></i><b>4.4</b> Predictive performance metrics</a></li>
+<li class="chapter" data-level="4.5" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-pi"><i class="fa fa-check"></i><b>4.5</b> Predictor importance</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">TWS 2020: eBird Status and Trends</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="multi-species-trajectories" class="section level1">
+<h1><span class="header-section-number">Lesson 3</span> Multi-species Trajectories</h1>
+<div id="traj-objective" class="section level2">
+<h2><span class="header-section-number">3.1</span> Objective</h2>
+<p>To prepare data for comparing Status and Trends results across multiple species. As an example, we’ll compute proportion of population trajectories for a suite of species.</p>
+</div>
+<div id="traj-intro" class="section level2">
+<h2><span class="header-section-number">3.2</span> Introduction</h2>
+<p>Comparing Status and Trends results between species requires extra caution because the models give <em>relative</em> rather than absolute abundance. For example, species differ in their detectability, and this may cause in differences in relative abundance. To address this, we’ll convert relative abundance to a proportion of population metric for each species by dividing the abundance layer by the total abundance summed across the entire range. For any given cell, this gives the proportion of relative abundance occurring in that cell. In addition, in this lesson we’ll look at the temporal dimension of these data, plotting trajectories through time for a given region.</p>
+<p>Let’s start by loading the necessary packages for this lesson.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="multi-species-trajectories.html#cb25-1"></a><span class="kw">library</span>(ebirdst)</span>
+<span id="cb25-2"><a href="multi-species-trajectories.html#cb25-2"></a><span class="kw">library</span>(raster)</span>
+<span id="cb25-3"><a href="multi-species-trajectories.html#cb25-3"></a><span class="kw">library</span>(sf)</span>
+<span id="cb25-4"><a href="multi-species-trajectories.html#cb25-4"></a><span class="kw">library</span>(rnaturalearth)</span>
+<span id="cb25-5"><a href="multi-species-trajectories.html#cb25-5"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb25-6"><a href="multi-species-trajectories.html#cb25-6"></a><span class="kw">library</span>(parallel)</span>
+<span id="cb25-7"><a href="multi-species-trajectories.html#cb25-7"></a>extract &lt;-<span class="st"> </span>raster<span class="op">::</span>extract</span></code></pre></div>
+<p>For this example, we’ll be looking at a suite of shorebird species in Kansas, so let’s also get a boundary polygon for that state.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="multi-species-trajectories.html#cb26-1"></a>ks &lt;-<span class="st"> </span><span class="kw">ne_states</span>(<span class="dt">iso_a2 =</span> <span class="st">&quot;US&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb26-2"><a href="multi-species-trajectories.html#cb26-2"></a><span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Kansas&quot;</span>)</span></code></pre></div>
+</div>
+<div id="traj-data" class="section level2">
+<h2><span class="header-section-number">3.3</span> Multi-species data</h2>
+<p>We begin by downloading data for a suite of 7 shorebird species that all spend at least a portion of the year within Kansas.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="multi-species-trajectories.html#cb27-1"></a>species &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;American Avocet&quot;</span>, <span class="st">&quot;Snowy Plover&quot;</span>, <span class="st">&quot;Hudsonian Godwit&quot;</span>, </span>
+<span id="cb27-2"><a href="multi-species-trajectories.html#cb27-2"></a>             <span class="st">&quot;Willet&quot;</span>, <span class="st">&quot;Marbled Godwit&quot;</span>, <span class="st">&quot;Sanderling&quot;</span>, </span>
+<span id="cb27-3"><a href="multi-species-trajectories.html#cb27-3"></a>             <span class="st">&quot;Semipalmated Sandpiper&quot;</span>)</span>
+<span id="cb27-4"><a href="multi-species-trajectories.html#cb27-4"></a>sp_dirs &lt;-<span class="st"> </span><span class="kw">map_chr</span>(species, ebirdst_download) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb27-5"><a href="multi-species-trajectories.html#cb27-5"></a><span class="st">  </span><span class="kw">setNames</span>(species)</span></code></pre></div>
+</div>
+<div id="traj-pop" class="section level2">
+<h2><span class="header-section-number">3.4</span> Proportion of population</h2>
+<p>Our goal is to produce trajectories comparing the proportion of each species’ population within Kansas for each week of 2018. For each species we need to:</p>
+<ol style="list-style-type: decimal">
+<li>Calculate the sum of the abundance within Kansas for each week</li>
+<li>Calculate the sum of the abundance across the entire range of the species for each week</li>
+<li>Calculate the proportion of the population as the ratio of the within Kansas abundance to the total abundance</li>
+</ol>
+<p>The below function performs these steps for a given species. Iterating over the full set of species is fairly computationally intensive, taking about 20 minutes on a laptop.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="multi-species-trajectories.html#cb28-1"></a>calculate_trajectory &lt;-<span class="st"> </span><span class="cf">function</span>(x, common_name, region) {</span>
+<span id="cb28-2"><a href="multi-species-trajectories.html#cb28-2"></a>  <span class="kw">message</span>(<span class="kw">names</span>(x))</span>
+<span id="cb28-3"><a href="multi-species-trajectories.html#cb28-3"></a>  <span class="co"># load and project weekly abundance</span></span>
+<span id="cb28-4"><a href="multi-species-trajectories.html#cb28-4"></a>  abd &lt;-<span class="st"> </span><span class="kw">load_raster</span>(<span class="st">&quot;abundance&quot;</span>, <span class="dt">path =</span> x)</span>
+<span id="cb28-5"><a href="multi-species-trajectories.html#cb28-5"></a>  r &lt;-<span class="st"> </span><span class="kw">st_transform</span>(region, <span class="dt">crs =</span> <span class="kw">st_crs</span>(abd))</span>
+<span id="cb28-6"><a href="multi-species-trajectories.html#cb28-6"></a>  </span>
+<span id="cb28-7"><a href="multi-species-trajectories.html#cb28-7"></a>  <span class="co"># total abundance within region</span></span>
+<span id="cb28-8"><a href="multi-species-trajectories.html#cb28-8"></a>  abd_region &lt;-<span class="st"> </span>abd <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb28-9"><a href="multi-species-trajectories.html#cb28-9"></a><span class="st">    </span><span class="kw">crop</span>(r) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb28-10"><a href="multi-species-trajectories.html#cb28-10"></a><span class="st">    </span><span class="kw">extract</span>(r, <span class="dt">fun =</span> sum)</span>
+<span id="cb28-11"><a href="multi-species-trajectories.html#cb28-11"></a>  abd_region &lt;-<span class="st"> </span>abd_region[<span class="dv">1</span>, , drop =<span class="st"> </span><span class="ot">TRUE</span>]</span>
+<span id="cb28-12"><a href="multi-species-trajectories.html#cb28-12"></a>  </span>
+<span id="cb28-13"><a href="multi-species-trajectories.html#cb28-13"></a>  <span class="co"># calculate total range-wide abundance</span></span>
+<span id="cb28-14"><a href="multi-species-trajectories.html#cb28-14"></a>  abd_total &lt;-<span class="st"> </span><span class="kw">mclapply</span>(<span class="kw">seq.int</span>(<span class="kw">nlayers</span>(abd)),</span>
+<span id="cb28-15"><a href="multi-species-trajectories.html#cb28-15"></a>                        <span class="cf">function</span>(i) <span class="kw">cellStats</span>(abd[[i]], sum),</span>
+<span id="cb28-16"><a href="multi-species-trajectories.html#cb28-16"></a>                        <span class="dt">mc.preschedule =</span> <span class="ot">TRUE</span>, <span class="dt">mc.set.seed =</span> <span class="ot">TRUE</span>, </span>
+<span id="cb28-17"><a href="multi-species-trajectories.html#cb28-17"></a>                        <span class="dt">mc.cores =</span> <span class="kw">detectCores</span>()) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb28-18"><a href="multi-species-trajectories.html#cb28-18"></a><span class="st">    </span><span class="kw">unlist</span>()</span>
+<span id="cb28-19"><a href="multi-species-trajectories.html#cb28-19"></a>  </span>
+<span id="cb28-20"><a href="multi-species-trajectories.html#cb28-20"></a>  <span class="kw">data.frame</span>(<span class="dt">common_name =</span> common_name,</span>
+<span id="cb28-21"><a href="multi-species-trajectories.html#cb28-21"></a>             <span class="dt">date =</span> <span class="kw">parse_raster_dates</span>(abd),</span>
+<span id="cb28-22"><a href="multi-species-trajectories.html#cb28-22"></a>             <span class="dt">prop_pop =</span> abd_region <span class="op">/</span><span class="st"> </span>abd_total,</span>
+<span id="cb28-23"><a href="multi-species-trajectories.html#cb28-23"></a>             <span class="dt">row.names =</span> <span class="ot">NULL</span>)</span>
+<span id="cb28-24"><a href="multi-species-trajectories.html#cb28-24"></a>}</span>
+<span id="cb28-25"><a href="multi-species-trajectories.html#cb28-25"></a>trajectories &lt;-<span class="st"> </span><span class="kw">map2_dfr</span>(sp_dirs, <span class="kw">names</span>(sp_dirs), </span>
+<span id="cb28-26"><a href="multi-species-trajectories.html#cb28-26"></a>                         calculate_trajectory,</span>
+<span id="cb28-27"><a href="multi-species-trajectories.html#cb28-27"></a>                         <span class="dt">region =</span> ks)</span>
+<span id="cb28-28"><a href="multi-species-trajectories.html#cb28-28"></a><span class="kw">write_csv</span>(trajectories,  <span class="st">&quot;data/shorebird_pop-trajectories.csv&quot;</span>)</span></code></pre></div>
+</div>
+<div id="traj-traj" class="section level2">
+<h2><span class="header-section-number">3.5</span> Trajectories</h2>
+<p>Now we can plot these trajectories for the set of shorebird species.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="multi-species-trajectories.html#cb29-1"></a><span class="kw">ggplot</span>(trajectories, <span class="kw">aes</span>(date, prop_pop, <span class="dt">color =</span> common_name)) <span class="op">+</span></span>
+<span id="cb29-2"><a href="multi-species-trajectories.html#cb29-2"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb29-3"><a href="multi-species-trajectories.html#cb29-3"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Week&quot;</span>, </span>
+<span id="cb29-4"><a href="multi-species-trajectories.html#cb29-4"></a>       <span class="dt">y =</span> <span class="st">&quot;Proportion of Population in Kansas&quot;</span>,</span>
+<span id="cb29-5"><a href="multi-species-trajectories.html#cb29-5"></a>       <span class="dt">color =</span> <span class="ot">NULL</span>) <span class="op">+</span></span>
+<span id="cb29-6"><a href="multi-species-trajectories.html#cb29-6"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;bottom&quot;</span>)</span></code></pre></div>
+<p><img src="naoc2020-ebirdst_files/figure-html/traj-traj-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+</div>
+<div id="traj-rich" class="section level2">
+<h2><span class="header-section-number">3.6</span> Richness</h2>
+<p>Finally, we can combine these 7 trajectories into a single trajectory giving an estimate of the richness of this group of shorebirds throughout the year.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="multi-species-trajectories.html#cb30-1"></a>richness &lt;-<span class="st"> </span>trajectories <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb30-2"><a href="multi-species-trajectories.html#cb30-2"></a><span class="st">  </span><span class="kw">group_by</span>(date) <span class="op">%&gt;%</span></span>
+<span id="cb30-3"><a href="multi-species-trajectories.html#cb30-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n_species =</span> <span class="kw">n_distinct</span>(common_name[prop_pop <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>]))</span>
+<span id="cb30-4"><a href="multi-species-trajectories.html#cb30-4"></a></span>
+<span id="cb30-5"><a href="multi-species-trajectories.html#cb30-5"></a><span class="co"># plot richness</span></span>
+<span id="cb30-6"><a href="multi-species-trajectories.html#cb30-6"></a><span class="kw">ggplot</span>(richness, <span class="kw">aes</span>(date, n_species)) <span class="op">+</span></span>
+<span id="cb30-7"><a href="multi-species-trajectories.html#cb30-7"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb30-8"><a href="multi-species-trajectories.html#cb30-8"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Week&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Richness&quot;</span>)</span></code></pre></div>
+<p><img src="naoc2020-ebirdst_files/figure-html/traj-rich-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="site-selection.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="non-raster-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

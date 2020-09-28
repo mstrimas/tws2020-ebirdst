@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lesson 4 Non-raster Data | TWS 2020: eBird Status and Trends</title>
+  <meta name="description" content="Lessons for a workshop on accessing and using eBird Status and Trends data given at TWS 2020" />
+  <meta name="generator" content="bookdown 0.20.1 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lesson 4 Non-raster Data | TWS 2020: eBird Status and Trends" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lessons for a workshop on accessing and using eBird Status and Trends data given at TWS 2020" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lesson 4 Non-raster Data | TWS 2020: eBird Status and Trends" />
+  
+  <meta name="twitter:description" content="Lessons for a workshop on accessing and using eBird Status and Trends data given at TWS 2020" />
+  
+
+<meta name="author" content="Matthew Strimas-Mackey and Orin Robinson" />
+
+
+<meta name="date" content="2020-08-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="multi-species-trajectories.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">eBird Status and Trends</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#setup"><i class="fa fa-check"></i><b>0.1</b> Setup</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a><ul>
+<li class="chapter" data-level="1.1" data-path="access.html"><a href="access.html#objective"><i class="fa fa-check"></i><b>1.1</b> Objective</a></li>
+<li class="chapter" data-level="1.2" data-path="access.html"><a href="access.html#intro"><i class="fa fa-check"></i><b>1.2</b> Introduction</a></li>
+<li class="chapter" data-level="1.3" data-path="access.html"><a href="access.html#species"><i class="fa fa-check"></i><b>1.3</b> Species list</a></li>
+<li class="chapter" data-level="1.4" data-path="access.html"><a href="access.html#dl"><i class="fa fa-check"></i><b>1.4</b> Download data</a></li>
+<li class="chapter" data-level="1.5" data-path="access.html"><a href="access.html#load"><i class="fa fa-check"></i><b>1.5</b> Load data</a></li>
+<li class="chapter" data-level="1.6" data-path="access.html"><a href="access.html#map"><i class="fa fa-check"></i><b>1.6</b> Mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a><ul>
+<li class="chapter" data-level="2.1" data-path="site-selection.html"><a href="site-selection.html#site-objective"><i class="fa fa-check"></i><b>2.1</b> Objective</a></li>
+<li class="chapter" data-level="2.2" data-path="site-selection.html"><a href="site-selection.html#site-intro"><i class="fa fa-check"></i><b>2.2</b> Introduction</a></li>
+<li class="chapter" data-level="2.3" data-path="site-selection.html"><a href="site-selection.html#site-seasonal"><i class="fa fa-check"></i><b>2.3</b> Seasonal abundance data</a></li>
+<li class="chapter" data-level="2.4" data-path="site-selection.html"><a href="site-selection.html#site-rangewide"><i class="fa fa-check"></i><b>2.4</b> Range-wide site selection</a></li>
+<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="site-selection.html"><a href="site-selection.html#site-local-uncertainty"><i class="fa fa-check"></i><b>2.5.1</b> Uncertainty analysis</a></li>
+<li class="chapter" data-level="2.5.2" data-path="site-selection.html"><a href="site-selection.html#ground-truth"><i class="fa fa-check"></i><b>2.5.2</b> Ground truth</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a><ul>
+<li class="chapter" data-level="3.1" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-objective"><i class="fa fa-check"></i><b>3.1</b> Objective</a></li>
+<li class="chapter" data-level="3.2" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-intro"><i class="fa fa-check"></i><b>3.2</b> Introduction</a></li>
+<li class="chapter" data-level="3.3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-data"><i class="fa fa-check"></i><b>3.3</b> Multi-species data</a></li>
+<li class="chapter" data-level="3.4" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-pop"><i class="fa fa-check"></i><b>3.4</b> Proportion of population</a></li>
+<li class="chapter" data-level="3.5" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-traj"><i class="fa fa-check"></i><b>3.5</b> Trajectories</a></li>
+<li class="chapter" data-level="3.6" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-rich"><i class="fa fa-check"></i><b>3.6</b> Richness</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a><ul>
+<li class="chapter" data-level="4.1" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-objective"><i class="fa fa-check"></i><b>4.1</b> Objective</a></li>
+<li class="chapter" data-level="4.2" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-intro"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
+<li class="chapter" data-level="4.3" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-effext"><i class="fa fa-check"></i><b>4.3</b> Effective extent</a></li>
+<li class="chapter" data-level="4.4" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-ppms"><i class="fa fa-check"></i><b>4.4</b> Predictive performance metrics</a></li>
+<li class="chapter" data-level="4.5" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-pi"><i class="fa fa-check"></i><b>4.5</b> Predictor importance</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">TWS 2020: eBird Status and Trends</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="non-raster-data" class="section level1">
+<h1><span class="header-section-number">Lesson 4</span> Non-raster Data</h1>
+<div id="nonraster-objective" class="section level2">
+<h2><span class="header-section-number">4.1</span> Objective</h2>
+<p>To use the non-raster, centroid data as a diagnostic tool to assess predictive performance and identify the most important habitat predictors.</p>
+</div>
+<div id="nonraster-intro" class="section level2">
+<h2><span class="header-section-number">4.2</span> Introduction</h2>
+<p>If we use <code>ebirdst_download(tifs_only = FALSE)</code>, the Status and Trends data packages that get downloaded will contain some addition data beyond the raster data we’ve already been working with. These data are provided at the level of the individual stixels that make up the ensemble which produces the abundance estimates. We often refer to these as “centroid” data because the centroids of the stixels are used to identify which stixel the values come from.</p>
+<p><img src="img/single_stixel_with_dots.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p>These data have a variety of uses, but we’ll focus on three here:</p>
+<ol style="list-style-type: decimal">
+<li>Identifying the effective region from which information is going into the analysis</li>
+<li>Using predictive performance metrics as a diagnostic tool to assess model performance in a given region</li>
+<li>Identifying the most important habitat predictors in a given region</li>
+</ol>
+<p>We’ll start be loading packages and defining a focal region and time period: Louisiana during the breeding season.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="non-raster-data.html#cb31-1"></a><span class="kw">library</span>(ebirdst)</span>
+<span id="cb31-2"><a href="non-raster-data.html#cb31-2"></a><span class="kw">library</span>(raster)</span>
+<span id="cb31-3"><a href="non-raster-data.html#cb31-3"></a><span class="kw">library</span>(sf)</span>
+<span id="cb31-4"><a href="non-raster-data.html#cb31-4"></a><span class="kw">library</span>(rnaturalearth)</span>
+<span id="cb31-5"><a href="non-raster-data.html#cb31-5"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb31-6"><a href="non-raster-data.html#cb31-6"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb31-7"><a href="non-raster-data.html#cb31-7"></a></span>
+<span id="cb31-8"><a href="non-raster-data.html#cb31-8"></a><span class="co"># louisiana</span></span>
+<span id="cb31-9"><a href="non-raster-data.html#cb31-9"></a>la &lt;-<span class="st"> </span><span class="kw">ne_states</span>(<span class="dt">iso_a2 =</span> <span class="st">&quot;US&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb31-10"><a href="non-raster-data.html#cb31-10"></a><span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Louisiana&quot;</span>)</span>
+<span id="cb31-11"><a href="non-raster-data.html#cb31-11"></a><span class="co"># breeding season</span></span>
+<span id="cb31-12"><a href="non-raster-data.html#cb31-12"></a>logshr_run &lt;-<span class="st"> </span><span class="kw">filter</span>(ebirdst_runs, common_name <span class="op">==</span><span class="st"> &quot;Loggerhead Shrike&quot;</span>)</span>
+<span id="cb31-13"><a href="non-raster-data.html#cb31-13"></a>start_dt &lt;-<span class="st"> </span>logshr_run<span class="op">$</span>breeding_start_dt</span>
+<span id="cb31-14"><a href="non-raster-data.html#cb31-14"></a>end_dt &lt;-<span class="st"> </span>logshr_run<span class="op">$</span>breeding_end_dt</span>
+<span id="cb31-15"><a href="non-raster-data.html#cb31-15"></a><span class="co"># ebirdst_extent object</span></span>
+<span id="cb31-16"><a href="non-raster-data.html#cb31-16"></a>la_breeding_season &lt;-<span class="st"> </span><span class="kw">ebirdst_extent</span>(la, <span class="kw">c</span>(start_dt, end_dt))</span>
+<span id="cb31-17"><a href="non-raster-data.html#cb31-17"></a></span>
+<span id="cb31-18"><a href="non-raster-data.html#cb31-18"></a><span class="co"># loggerhead shrike data path</span></span>
+<span id="cb31-19"><a href="non-raster-data.html#cb31-19"></a>sp_path &lt;-<span class="st"> </span><span class="kw">get_species_path</span>(<span class="st">&quot;logshr&quot;</span>)</span></code></pre></div>
+</div>
+<div id="nonraster-effext" class="section level2">
+<h2><span class="header-section-number">4.3</span> Effective extent</h2>
+<p>For a given region and time period, <code>calc_effective_extent()</code> produces a map showing the centroids of all the stixels that comprise the model.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="non-raster-data.html#cb32-1"></a><span class="kw">calc_effective_extent</span>(sp_path, la_breeding_season)</span></code></pre></div>
+<p><img src="naoc2020-ebirdst_files/figure-html/effext-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+</div>
+<div id="nonraster-ppms" class="section level2">
+<h2><span class="header-section-number">4.4</span> Predictive performance metrics</h2>
+<p>We can use <code>plot_all_ppms()</code> to assess model performance within a given region and season, here Louisiana during the breeding season.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="non-raster-data.html#cb33-1"></a><span class="kw">plot_all_ppms</span>(sp_path, la_breeding_season)</span></code></pre></div>
+<p><img src="naoc2020-ebirdst_files/figure-html/ppms-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+</div>
+<div id="nonraster-pi" class="section level2">
+<h2><span class="header-section-number">4.5</span> Predictor importance</h2>
+<p>Finally, we can look at the most importance predictor variables identified by the model in a given region and season.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="non-raster-data.html#cb34-1"></a><span class="co"># load predictor importance data</span></span>
+<span id="cb34-2"><a href="non-raster-data.html#cb34-2"></a>pis &lt;-<span class="st"> </span><span class="kw">load_pis</span>(sp_path)</span>
+<span id="cb34-3"><a href="non-raster-data.html#cb34-3"></a></span>
+<span id="cb34-4"><a href="non-raster-data.html#cb34-4"></a><span class="co"># plot the predictor importances for louisiana in the breeding season</span></span>
+<span id="cb34-5"><a href="non-raster-data.html#cb34-5"></a><span class="kw">plot_pis</span>(pis, <span class="dt">ext =</span> la_breeding_season, <span class="dt">by_cover_class =</span> <span class="ot">TRUE</span>, <span class="dt">n_top_pred =</span> <span class="dv">25</span>)</span></code></pre></div>
+<p><img src="naoc2020-ebirdst_files/figure-html/pi-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="multi-species-trajectories.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
