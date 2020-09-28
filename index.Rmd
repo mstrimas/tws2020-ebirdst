@@ -22,4 +22,4 @@ install.packages(c("tidyverse", "raster", "sf", "ebirdst", "rnaturalearth", "rge
 remotes::install_github("ropensci/rnaturalearthhires")
 ```
 
-To download the source files and following along with this workshop visit the [GitHub repository](https://github.com/mstrimas/naoc2020-ebirdst/).
+To download the source files and following along with this workshop visit the [GitHub repository](https://github.com/mstrimas/tws2020-ebirdst/).
