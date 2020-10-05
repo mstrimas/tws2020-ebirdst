@@ -2,7 +2,7 @@
 
 With that background, I want to transition to a brief demonstration of accessing and using these data within R. Because of the format of this short workshop, i.e. Zoom and a large number of participants, this is going to be a demonstration rather than an interactive workshop. You're not meant to following along with the code, but I will stop for questions and all the notes and code are online, so you can work through them after at your own pace.
 
-[eBird Status and Trends](https://ebird.org/science/status-and-trends) provides modeled estimates of the distribution and relative abundance of 610 North American breeding bird species over their full annual cycle at high spatial and temporal resolution. All the data behind the maps you've seen online, and in Tom's presentation, are freely and openly available, hosted by the [Registry of Open Data on AWS](https://registry.opendata.aws/ebirdst/). In addition to being able to download the data from AWS, we maintain the `ebirdst` R package for easily accessing and working with these data. In this first lesson, I'll show you how to access these data, load them into your R session, and make a simple map.
+[eBird Status and Trends](https://ebird.org/science/status-and-trends) provides modeled estimates of the distribution and relative abundance of 610 North American breeding bird species over their full annual cycle at high spatial and temporal resolution. All the data behind the maps you've seen online, and in Orin's presentation, are freely and openly available, hosted by the [Registry of Open Data on AWS](https://registry.opendata.aws/ebirdst/). In addition to being able to download the data from AWS, we maintain the `ebirdst` R package for easily accessing and working with these data. In this first lesson, I'll show you how to access these data, load them into your R session, and make a simple map.
 
 ```{r site-libraries}
 library(ebirdst)
@@ -63,9 +63,9 @@ plot(abd[[20]], axes = FALSE, box = FALSE,
      maxpixels = ncell(abd))
 ```
 
-Notice three failings with this map:
-- Extreme distortion in the continents
-- Most of this map is taken up by areas where the species doesn't occur, e.g. South America
+Notice three failings with this map: 
+- Extreme distortion in the continents 
+- Most of this map is taken up by areas where the species doesn't occur, e.g. South America 
 - There isn't much resolution in the color palette in areas where it does occur
 
 These raster layers are provided for the entire Western Hemisphere in a sinusoidal equal area projection. This format ensures consistency across the full set of Status and Trends species, but isn't ideal for mapping the data for a single species. To address this, each Status and Trends data package comes with a set of parameters suitable for mapping the data for that species. Let's reproduce the above map using the provided extent, projection, and legend bins.
@@ -140,7 +140,7 @@ abd_breeding_proj <- abd_breeding %>%
 
 ## Range-wide Site Selection
 
-To perform a range-wide site selection, we'll identify the locations with the top 5% of non-zero abundance values across the entire range and visualize those locations. 
+To perform a range-wide site selection, we'll identify the locations with the top 5% of non-zero abundance values across the entire range and visualize those locations.
 
 ```{r rangewide-quantile}
 # remove zeroes prior to calculating quantiles
@@ -151,7 +151,7 @@ q95 <- quantile(abd_breeding_proj, na.rm = TRUE, probs = 0.95)
 abd_top5 <- abd_breeding_proj >= q95
 ```
 
-We can map the selected site with:
+We can map the selected sites with:
 
 ```{r rangewide-map}
 par(mar = c(0, 0, 0, 0))
@@ -254,11 +254,11 @@ One additional way to check the results of a site selection exercise is to groun
 
 ![](../img/logshr-satellite.png)
 
-# Multi-species Temporal Trajectories
+# 3. Multi-species Temporal Trajectories
 
 In this final lesson, I want to touch on two things we haven't seen examples of yet: comparing data across multiple species and the temporal component of these data. The goal will be to look at how populations of a suite of shorebirds in Kansas change over the course of the year.
 
-Comparing Status and Trends results between species requires extra caution because the models give _relative_ rather than absolute abundance. For example, species differ in their detectability, and this may cause in differences in relative abundance. To address this, we'll convert relative abundance to a proportion of population metric for each species by dividing the abundance layer by the total abundance summed across the entire range. For any given cell, this gives the proportion of relative abundance occurring in that cell.
+Comparing Status and Trends results between species requires extra caution because the models give *relative* rather than absolute abundance. For example, species differ in their detectability, and this may cause in differences in relative abundance. To address this, we'll convert relative abundance to a proportion of population metric for each species by dividing the abundance layer by the total abundance summed across the entire range. For any given cell, this gives the proportion of relative abundance occurring in that cell.
 
 ```{r traj-libraries}
 library(ebirdst)
@@ -291,9 +291,9 @@ sp_dirs <- map_chr(species, get_species_path) %>%
 
 Our goal is to produce trajectories comparing the proportion of each species' population within Kansas for each week of 2018. To do this, for each species we need to:
 
-1. Sum up the abundance across all cells within Kansas for each week
-2. Sum the abundance across the entire range of the species for each week
-3. Calculate the proportion of the population in Kansas, i.e. divide (1) by (2)
+1.  Sum up the abundance across all cells within Kansas for each week
+2.  Sum the abundance across the entire range of the species for each week
+3.  Calculate the proportion of the population in Kansas, i.e. divide (1) by (2)
 
 The below function performs these steps for a given species. Iterating over the full set of species is fairly computationally intensive, taking about 20 minutes on a laptop.
 
@@ -360,4 +360,3 @@ ggplot(richness, aes(date, n_species)) +
   geom_line() +
   labs(x = "Week", y = "Richness")
 ```
-

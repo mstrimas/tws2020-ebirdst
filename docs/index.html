@@ -33,6 +33,7 @@
   
 
 <link rel="next" href="access.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -54,18 +55,17 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -134,10 +134,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">eBird Status and Trends</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
 <li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#setup"><i class="fa fa-check"></i><b>0.1</b> Setup</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a><ul>
+<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="access.html"><a href="access.html#objective"><i class="fa fa-check"></i><b>1.1</b> Objective</a></li>
 <li class="chapter" data-level="1.2" data-path="access.html"><a href="access.html#intro"><i class="fa fa-check"></i><b>1.2</b> Introduction</a></li>
 <li class="chapter" data-level="1.3" data-path="access.html"><a href="access.html#species"><i class="fa fa-check"></i><b>1.3</b> Species list</a></li>
@@ -145,17 +147,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5" data-path="access.html"><a href="access.html#load"><i class="fa fa-check"></i><b>1.5</b> Load data</a></li>
 <li class="chapter" data-level="1.6" data-path="access.html"><a href="access.html#map"><i class="fa fa-check"></i><b>1.6</b> Mapping</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a><ul>
+<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="site-selection.html"><a href="site-selection.html#site-objective"><i class="fa fa-check"></i><b>2.1</b> Objective</a></li>
 <li class="chapter" data-level="2.2" data-path="site-selection.html"><a href="site-selection.html#site-intro"><i class="fa fa-check"></i><b>2.2</b> Introduction</a></li>
 <li class="chapter" data-level="2.3" data-path="site-selection.html"><a href="site-selection.html#site-seasonal"><i class="fa fa-check"></i><b>2.3</b> Seasonal abundance data</a></li>
 <li class="chapter" data-level="2.4" data-path="site-selection.html"><a href="site-selection.html#site-rangewide"><i class="fa fa-check"></i><b>2.4</b> Range-wide site selection</a></li>
-<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a><ul>
+<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a>
+<ul>
 <li class="chapter" data-level="2.5.1" data-path="site-selection.html"><a href="site-selection.html#site-local-uncertainty"><i class="fa fa-check"></i><b>2.5.1</b> Uncertainty analysis</a></li>
 <li class="chapter" data-level="2.5.2" data-path="site-selection.html"><a href="site-selection.html#ground-truth"><i class="fa fa-check"></i><b>2.5.2</b> Ground truth</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a><ul>
+<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-objective"><i class="fa fa-check"></i><b>3.1</b> Objective</a></li>
 <li class="chapter" data-level="3.2" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-intro"><i class="fa fa-check"></i><b>3.2</b> Introduction</a></li>
 <li class="chapter" data-level="3.3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-data"><i class="fa fa-check"></i><b>3.3</b> Multi-species data</a></li>
@@ -163,7 +168,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-traj"><i class="fa fa-check"></i><b>3.5</b> Trajectories</a></li>
 <li class="chapter" data-level="3.6" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-rich"><i class="fa fa-check"></i><b>3.6</b> Richness</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a><ul>
+<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-objective"><i class="fa fa-check"></i><b>4.1</b> Objective</a></li>
 <li class="chapter" data-level="4.2" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-intro"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
 <li class="chapter" data-level="4.3" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-effext"><i class="fa fa-check"></i><b>4.3</b> Effective extent</a></li>
@@ -192,16 +198,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="author"><em>Matthew Strimas-Mackey and Orin Robinson</em></p>
 <p class="date"><em>2020-08-10</em></p>
 </div>
-<div id="welcome" class="section level1 unnumbered">
+<div id="welcome" class="section level1 unnumbered" number="">
 <h1>Welcome</h1>
 <p>The community science project <a href="https://ebird.org/home">eBird</a> has generated a database of over 800 million bird observations, with broad spatial and taxonomic coverage. Over the past 10 years, the <a href="https://www.birds.cornell.edu/home/">Cornell Lab of Ornithology</a> has developed machine-learning models using eBird and remotely-sensed data to produce high resolution, weekly estimates of range boundaries, occurrence rate, and relative abundance while accounting for many of the biases inherent in community science datasets, including variation in observer behavior and effort. Visualizations and modeled data products for 610 North American breeding birds, including resident and non-breeding grounds in South America, are currently available on the <a href="https://ebird.org/science/status-and-trends">eBird Status and Trends website</a>.</p>
 <p>This workshop will introduce attendees to the modeled data products (weekly estimates of range boundaries, occurrence rate, and relative abundance) and the <code>ebirdst</code> R package developed specifically for working with these data. This will include an introduction to the modeling process used to generate the eBird Status and Trends data products. It will also include a demonstration of how to access and manipulate these data products for specific combinations of species, seasons, and regions using the <code>ebirdst</code> package. After the workshop, attendees will have an understanding of how and when to use these data products for applied research and conservation efforts, including within-year dynamics. Some experience with R will be helpful in following along with the demonstration. Please note, this workshop will not cover the analysis of trends or trend data.</p>
-<div id="setup" class="section level2">
+<div id="setup" class="section level2" number="0.1">
 <h2><span class="header-section-number">0.1</span> Setup</h2>
 <p>To run the code in the workshop you’ll need to install the following packages:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="kw">c</span>(<span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;raster&quot;</span>, <span class="st">&quot;sf&quot;</span>, <span class="st">&quot;ebirdst&quot;</span>, <span class="st">&quot;rnaturalearth&quot;</span>, <span class="st">&quot;rgeos&quot;</span>, <span class="st">&quot;remotes&quot;</span>))</span>
 <span id="cb1-2"><a href="index.html#cb1-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;ropensci/rnaturalearthhires&quot;</span>)</span></code></pre></div>
-<p>To download the source files and following along with this workshop visit the <a href="https://github.com/mstrimas/naoc2020-ebirdst/">GitHub repository</a>.</p>
+<p>To download the source files and following along with this workshop visit the <a href="https://github.com/mstrimas/tws2020-ebirdst/">GitHub repository</a>.</p>
 
 </div>
 </div>

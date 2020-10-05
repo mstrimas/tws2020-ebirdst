@@ -33,6 +33,7 @@
   
 <link rel="prev" href="access.html"/>
 <link rel="next" href="multi-species-trajectories.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -54,18 +55,17 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -134,10 +134,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">eBird Status and Trends</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
 <li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#setup"><i class="fa fa-check"></i><b>0.1</b> Setup</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a><ul>
+<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="access.html"><a href="access.html#objective"><i class="fa fa-check"></i><b>1.1</b> Objective</a></li>
 <li class="chapter" data-level="1.2" data-path="access.html"><a href="access.html#intro"><i class="fa fa-check"></i><b>1.2</b> Introduction</a></li>
 <li class="chapter" data-level="1.3" data-path="access.html"><a href="access.html#species"><i class="fa fa-check"></i><b>1.3</b> Species list</a></li>
@@ -145,17 +147,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5" data-path="access.html"><a href="access.html#load"><i class="fa fa-check"></i><b>1.5</b> Load data</a></li>
 <li class="chapter" data-level="1.6" data-path="access.html"><a href="access.html#map"><i class="fa fa-check"></i><b>1.6</b> Mapping</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a><ul>
+<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="site-selection.html"><a href="site-selection.html#site-objective"><i class="fa fa-check"></i><b>2.1</b> Objective</a></li>
 <li class="chapter" data-level="2.2" data-path="site-selection.html"><a href="site-selection.html#site-intro"><i class="fa fa-check"></i><b>2.2</b> Introduction</a></li>
 <li class="chapter" data-level="2.3" data-path="site-selection.html"><a href="site-selection.html#site-seasonal"><i class="fa fa-check"></i><b>2.3</b> Seasonal abundance data</a></li>
 <li class="chapter" data-level="2.4" data-path="site-selection.html"><a href="site-selection.html#site-rangewide"><i class="fa fa-check"></i><b>2.4</b> Range-wide site selection</a></li>
-<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a><ul>
+<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a>
+<ul>
 <li class="chapter" data-level="2.5.1" data-path="site-selection.html"><a href="site-selection.html#site-local-uncertainty"><i class="fa fa-check"></i><b>2.5.1</b> Uncertainty analysis</a></li>
 <li class="chapter" data-level="2.5.2" data-path="site-selection.html"><a href="site-selection.html#ground-truth"><i class="fa fa-check"></i><b>2.5.2</b> Ground truth</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a><ul>
+<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-objective"><i class="fa fa-check"></i><b>3.1</b> Objective</a></li>
 <li class="chapter" data-level="3.2" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-intro"><i class="fa fa-check"></i><b>3.2</b> Introduction</a></li>
 <li class="chapter" data-level="3.3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-data"><i class="fa fa-check"></i><b>3.3</b> Multi-species data</a></li>
@@ -163,7 +168,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-traj"><i class="fa fa-check"></i><b>3.5</b> Trajectories</a></li>
 <li class="chapter" data-level="3.6" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-rich"><i class="fa fa-check"></i><b>3.6</b> Richness</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a><ul>
+<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-objective"><i class="fa fa-check"></i><b>4.1</b> Objective</a></li>
 <li class="chapter" data-level="4.2" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-intro"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
 <li class="chapter" data-level="4.3" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-effext"><i class="fa fa-check"></i><b>4.3</b> Effective extent</a></li>
@@ -187,13 +193,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="site-selection" class="section level1">
+<div id="site-selection" class="section level1" number="2">
 <h1><span class="header-section-number">Lesson 2</span> Site Selection</h1>
-<div id="site-objective" class="section level2">
+<div id="site-objective" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Objective</h2>
 <p>To use eBird Status &amp; Trends data to identify important sites for Loggerhead Shrike during the breeding season at different spatial scales. This is an example of an analysis you might do to prioritize sites for a species, perhaps for conservation or management.</p>
 </div>
-<div id="site-intro" class="section level2">
+<div id="site-intro" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Introduction</h2>
 <p>In the previous lesson, we saw how to download <a href="https://ebird.org/science/status-and-trends">eBird Status and Trends</a> data and load weekly estimates of relative abundance into R for further analysis. In this lesson, we’ll demonstrate one possible use case for these data: identifying sites of high importance for a species of conservation concern. Let’s start by loading the libraries we’ll need for this analysis.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="site-selection.html#cb13-1"></a><span class="kw">library</span>(ebirdst)</span>
@@ -203,7 +209,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb13-5"><a href="site-selection.html#cb13-5"></a><span class="kw">library</span>(dplyr)</span>
 <span id="cb13-6"><a href="site-selection.html#cb13-6"></a><span class="kw">library</span>(ggplot2)</span></code></pre></div>
 </div>
-<div id="site-seasonal" class="section level2">
+<div id="site-seasonal" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Seasonal abundance data</h2>
 <p>For this site selection analysis we’ll be interested in identifying important sites for Loggerhead Shrike during the <strong>breeding</strong> season. Recall from the previous lesson, that Status and Trends data are provided as weekly estimates and we can access predefined seasonal boundary dates from the <code>ebirdst_runs</code> data frame.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="site-selection.html#cb14-1"></a>logshr_run &lt;-<span class="st"> </span><span class="kw">filter</span>(ebirdst_runs, common_name <span class="op">==</span><span class="st"> &quot;Loggerhead Shrike&quot;</span>)</span>
@@ -246,7 +252,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb16-6"><a href="site-selection.html#cb16-6"></a><span class="st">  </span><span class="kw">crop</span>(map_pars<span class="op">$</span>fa_extent_sinu) <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb16-7"><a href="site-selection.html#cb16-7"></a><span class="st">  </span><span class="kw">projectRaster</span>(<span class="dt">crs =</span> map_pars<span class="op">$</span>custom_projection, <span class="dt">method =</span> <span class="st">&quot;ngb&quot;</span>)</span></code></pre></div>
 </div>
-<div id="site-rangewide" class="section level2">
+<div id="site-rangewide" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Range-wide site selection</h2>
 <p>To perform a range-wide site selection, we’ll identify the locations with the top 5% of non-zero abundance values across the entire range and visualize those locations.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="site-selection.html#cb17-1"></a><span class="co"># remove zeroes prior to calculating quantiles</span></span>
@@ -262,7 +268,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb18-4"><a href="site-selection.html#cb18-4"></a>     <span class="dt">maxpixels =</span> <span class="kw">ncell</span>(abd_top5))</span></code></pre></div>
 <p><img src="naoc2020-ebirdst_files/figure-html/rangewide-map-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 </div>
-<div id="site-local" class="section level2">
+<div id="site-local" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Local Selection</h2>
 <p>Let’s transition from broad-scale, region-wide site selection to a local site selection exercise. For example, let’s consider a land trust working in Louisiana trying to identify important sites for Loggerhead Shrike. To start, we’ll get a boundary polygon for Louisiana.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="site-selection.html#cb19-1"></a><span class="co"># get spatial boundary for louisiana</span></span>
@@ -286,7 +292,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb20-13"><a href="site-selection.html#cb20-13"></a>     <span class="dt">box =</span> <span class="ot">FALSE</span>, <span class="dt">axes =</span> <span class="ot">FALSE</span>)</span>
 <span id="cb20-14"><a href="site-selection.html#cb20-14"></a><span class="kw">plot</span>(<span class="kw">st_geometry</span>(la), <span class="dt">add =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p><img src="naoc2020-ebirdst_files/figure-html/local-quarters-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
-<div id="site-local-uncertainty" class="section level3">
+<div id="site-local-uncertainty" class="section level3" number="2.5.1">
 <h3><span class="header-section-number">2.5.1</span> Uncertainty analysis</h3>
 <p>When using these abundance rasters at a local scale, it’s important to be cautious because of the broad spatial scale at which the modeling was conducted. As with any modeled estimates, these abundance estimates have uncertainty associated with them. One approach to dealing with this is to use the spatial estimates of uncertainty (the 10th and 90th quantiles of relative abundance) to assess if locations that we’re considering for selection have overlapping confidence intervals.</p>
 <p>Let’s start by loading these upper and lower confidence interval raster layers, subsetting to the breeding season within Louisiana, and calculating a breeding season average.</p>
@@ -336,7 +342,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb24-11"><a href="site-selection.html#cb24-11"></a>       <span class="dt">title =</span> <span class="st">&quot;Confidence intervals for locations&quot;</span>)</span></code></pre></div>
 <p><img src="naoc2020-ebirdst_files/figure-html/unnamed-chunk-5-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 </div>
-<div id="ground-truth" class="section level3">
+<div id="ground-truth" class="section level3" number="2.5.2">
 <h3><span class="header-section-number">2.5.2</span> Ground truth</h3>
 <p>One additional way to check the results of a site selection exercise is to ground truth the results using satellite imagery for the region in question.</p>
 <p><img src="img/logshr-satellite.png" width="\textwidth" style="display: block; margin: auto;" /></p>

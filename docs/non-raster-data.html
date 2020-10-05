@@ -33,6 +33,7 @@
   
 <link rel="prev" href="multi-species-trajectories.html"/>
 
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -54,18 +55,17 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -134,10 +134,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">eBird Status and Trends</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
 <li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#setup"><i class="fa fa-check"></i><b>0.1</b> Setup</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a><ul>
+<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="access.html"><a href="access.html#objective"><i class="fa fa-check"></i><b>1.1</b> Objective</a></li>
 <li class="chapter" data-level="1.2" data-path="access.html"><a href="access.html#intro"><i class="fa fa-check"></i><b>1.2</b> Introduction</a></li>
 <li class="chapter" data-level="1.3" data-path="access.html"><a href="access.html#species"><i class="fa fa-check"></i><b>1.3</b> Species list</a></li>
@@ -145,17 +147,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5" data-path="access.html"><a href="access.html#load"><i class="fa fa-check"></i><b>1.5</b> Load data</a></li>
 <li class="chapter" data-level="1.6" data-path="access.html"><a href="access.html#map"><i class="fa fa-check"></i><b>1.6</b> Mapping</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a><ul>
+<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="site-selection.html"><a href="site-selection.html#site-objective"><i class="fa fa-check"></i><b>2.1</b> Objective</a></li>
 <li class="chapter" data-level="2.2" data-path="site-selection.html"><a href="site-selection.html#site-intro"><i class="fa fa-check"></i><b>2.2</b> Introduction</a></li>
 <li class="chapter" data-level="2.3" data-path="site-selection.html"><a href="site-selection.html#site-seasonal"><i class="fa fa-check"></i><b>2.3</b> Seasonal abundance data</a></li>
 <li class="chapter" data-level="2.4" data-path="site-selection.html"><a href="site-selection.html#site-rangewide"><i class="fa fa-check"></i><b>2.4</b> Range-wide site selection</a></li>
-<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a><ul>
+<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a>
+<ul>
 <li class="chapter" data-level="2.5.1" data-path="site-selection.html"><a href="site-selection.html#site-local-uncertainty"><i class="fa fa-check"></i><b>2.5.1</b> Uncertainty analysis</a></li>
 <li class="chapter" data-level="2.5.2" data-path="site-selection.html"><a href="site-selection.html#ground-truth"><i class="fa fa-check"></i><b>2.5.2</b> Ground truth</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a><ul>
+<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-objective"><i class="fa fa-check"></i><b>3.1</b> Objective</a></li>
 <li class="chapter" data-level="3.2" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-intro"><i class="fa fa-check"></i><b>3.2</b> Introduction</a></li>
 <li class="chapter" data-level="3.3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-data"><i class="fa fa-check"></i><b>3.3</b> Multi-species data</a></li>
@@ -163,7 +168,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-traj"><i class="fa fa-check"></i><b>3.5</b> Trajectories</a></li>
 <li class="chapter" data-level="3.6" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-rich"><i class="fa fa-check"></i><b>3.6</b> Richness</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a><ul>
+<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-objective"><i class="fa fa-check"></i><b>4.1</b> Objective</a></li>
 <li class="chapter" data-level="4.2" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-intro"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
 <li class="chapter" data-level="4.3" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-effext"><i class="fa fa-check"></i><b>4.3</b> Effective extent</a></li>
@@ -187,13 +193,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="non-raster-data" class="section level1">
+<div id="non-raster-data" class="section level1" number="4">
 <h1><span class="header-section-number">Lesson 4</span> Non-raster Data</h1>
-<div id="nonraster-objective" class="section level2">
+<div id="nonraster-objective" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Objective</h2>
 <p>To use the non-raster, centroid data as a diagnostic tool to assess predictive performance and identify the most important habitat predictors.</p>
 </div>
-<div id="nonraster-intro" class="section level2">
+<div id="nonraster-intro" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Introduction</h2>
 <p>If we use <code>ebirdst_download(tifs_only = FALSE)</code>, the Status and Trends data packages that get downloaded will contain some addition data beyond the raster data we’ve already been working with. These data are provided at the level of the individual stixels that make up the ensemble which produces the abundance estimates. We often refer to these as “centroid” data because the centroids of the stixels are used to identify which stixel the values come from.</p>
 <p><img src="img/single_stixel_with_dots.png" width="\textwidth" style="display: block; margin: auto;" /></p>
@@ -203,7 +209,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Using predictive performance metrics as a diagnostic tool to assess model performance in a given region</li>
 <li>Identifying the most important habitat predictors in a given region</li>
 </ol>
-<p>We’ll start be loading packages and defining a focal region and time period: Louisiana during the breeding season.</p>
+<p>We’ll start by loading packages and defining a focal region and time period: Louisiana during the breeding season.</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="non-raster-data.html#cb31-1"></a><span class="kw">library</span>(ebirdst)</span>
 <span id="cb31-2"><a href="non-raster-data.html#cb31-2"></a><span class="kw">library</span>(raster)</span>
 <span id="cb31-3"><a href="non-raster-data.html#cb31-3"></a><span class="kw">library</span>(sf)</span>
@@ -224,19 +230,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb31-18"><a href="non-raster-data.html#cb31-18"></a><span class="co"># loggerhead shrike data path</span></span>
 <span id="cb31-19"><a href="non-raster-data.html#cb31-19"></a>sp_path &lt;-<span class="st"> </span><span class="kw">get_species_path</span>(<span class="st">&quot;logshr&quot;</span>)</span></code></pre></div>
 </div>
-<div id="nonraster-effext" class="section level2">
+<div id="nonraster-effext" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Effective extent</h2>
 <p>For a given region and time period, <code>calc_effective_extent()</code> produces a map showing the centroids of all the stixels that comprise the model.</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="non-raster-data.html#cb32-1"></a><span class="kw">calc_effective_extent</span>(sp_path, la_breeding_season)</span></code></pre></div>
 <p><img src="naoc2020-ebirdst_files/figure-html/effext-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 </div>
-<div id="nonraster-ppms" class="section level2">
+<div id="nonraster-ppms" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Predictive performance metrics</h2>
 <p>We can use <code>plot_all_ppms()</code> to assess model performance within a given region and season, here Louisiana during the breeding season.</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="non-raster-data.html#cb33-1"></a><span class="kw">plot_all_ppms</span>(sp_path, la_breeding_season)</span></code></pre></div>
 <p><img src="naoc2020-ebirdst_files/figure-html/ppms-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 </div>
-<div id="nonraster-pi" class="section level2">
+<div id="nonraster-pi" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Predictor importance</h2>
 <p>Finally, we can look at the most importance predictor variables identified by the model in a given region and season.</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="non-raster-data.html#cb34-1"></a><span class="co"># load predictor importance data</span></span>

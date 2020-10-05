@@ -77,11 +77,18 @@ calculate_trajectory <- function(x, common_name, region) {
   abd_region <- abd_region[1, , drop = TRUE]
   
   # calculate total range-wide abundance
-  abd_total <- mclapply(seq.int(nlayers(abd)),
-                        function(i) cellStats(abd[[i]], sum),
-                        mc.preschedule = TRUE, mc.set.seed = TRUE, 
-                        mc.cores = detectCores()) %>% 
-    unlist()
+  if (.Platform$OS.type == "unix") {
+    abd_total <- mclapply(seq.int(nlayers(abd)),
+                          function(i) cellStats(abd[[i]], sum),
+                          mc.preschedule = TRUE, mc.set.seed = TRUE, 
+                          mc.cores = detectCores()) %>% 
+      unlist()
+  } else {
+    abd_total <- lapply(seq.int(nlayers(abd)),
+                        function(i) cellStats(abd[[i]], sum)) %>% 
+      unlist()
+  }
+  
   
   data.frame(common_name = common_name,
              date = parse_raster_dates(abd),

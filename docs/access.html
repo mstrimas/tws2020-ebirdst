@@ -33,6 +33,7 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="site-selection.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -54,18 +55,17 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -134,10 +134,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">eBird Status and Trends</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
 <li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#setup"><i class="fa fa-check"></i><b>0.1</b> Setup</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a><ul>
+<li class="chapter" data-level="1" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>1</b> Data Access</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="access.html"><a href="access.html#objective"><i class="fa fa-check"></i><b>1.1</b> Objective</a></li>
 <li class="chapter" data-level="1.2" data-path="access.html"><a href="access.html#intro"><i class="fa fa-check"></i><b>1.2</b> Introduction</a></li>
 <li class="chapter" data-level="1.3" data-path="access.html"><a href="access.html#species"><i class="fa fa-check"></i><b>1.3</b> Species list</a></li>
@@ -145,17 +147,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5" data-path="access.html"><a href="access.html#load"><i class="fa fa-check"></i><b>1.5</b> Load data</a></li>
 <li class="chapter" data-level="1.6" data-path="access.html"><a href="access.html#map"><i class="fa fa-check"></i><b>1.6</b> Mapping</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a><ul>
+<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site Selection</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="site-selection.html"><a href="site-selection.html#site-objective"><i class="fa fa-check"></i><b>2.1</b> Objective</a></li>
 <li class="chapter" data-level="2.2" data-path="site-selection.html"><a href="site-selection.html#site-intro"><i class="fa fa-check"></i><b>2.2</b> Introduction</a></li>
 <li class="chapter" data-level="2.3" data-path="site-selection.html"><a href="site-selection.html#site-seasonal"><i class="fa fa-check"></i><b>2.3</b> Seasonal abundance data</a></li>
 <li class="chapter" data-level="2.4" data-path="site-selection.html"><a href="site-selection.html#site-rangewide"><i class="fa fa-check"></i><b>2.4</b> Range-wide site selection</a></li>
-<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a><ul>
+<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#site-local"><i class="fa fa-check"></i><b>2.5</b> Local Selection</a>
+<ul>
 <li class="chapter" data-level="2.5.1" data-path="site-selection.html"><a href="site-selection.html#site-local-uncertainty"><i class="fa fa-check"></i><b>2.5.1</b> Uncertainty analysis</a></li>
 <li class="chapter" data-level="2.5.2" data-path="site-selection.html"><a href="site-selection.html#ground-truth"><i class="fa fa-check"></i><b>2.5.2</b> Ground truth</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a><ul>
+<li class="chapter" data-level="3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html"><i class="fa fa-check"></i><b>3</b> Multi-species Trajectories</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-objective"><i class="fa fa-check"></i><b>3.1</b> Objective</a></li>
 <li class="chapter" data-level="3.2" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-intro"><i class="fa fa-check"></i><b>3.2</b> Introduction</a></li>
 <li class="chapter" data-level="3.3" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-data"><i class="fa fa-check"></i><b>3.3</b> Multi-species data</a></li>
@@ -163,7 +168,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-traj"><i class="fa fa-check"></i><b>3.5</b> Trajectories</a></li>
 <li class="chapter" data-level="3.6" data-path="multi-species-trajectories.html"><a href="multi-species-trajectories.html#traj-rich"><i class="fa fa-check"></i><b>3.6</b> Richness</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a><ul>
+<li class="chapter" data-level="4" data-path="non-raster-data.html"><a href="non-raster-data.html"><i class="fa fa-check"></i><b>4</b> Non-raster Data</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-objective"><i class="fa fa-check"></i><b>4.1</b> Objective</a></li>
 <li class="chapter" data-level="4.2" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-intro"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
 <li class="chapter" data-level="4.3" data-path="non-raster-data.html"><a href="non-raster-data.html#nonraster-effext"><i class="fa fa-check"></i><b>4.3</b> Effective extent</a></li>
@@ -187,13 +193,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="access" class="section level1">
+<div id="access" class="section level1" number="1">
 <h1><span class="header-section-number">Lesson 1</span> Data Access</h1>
-<div id="objective" class="section level2">
+<div id="objective" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Objective</h2>
 <p>To download eBird Status &amp; Trends data using the R package <a href="https://cornelllabofornithology.github.io/ebirdst/"><code>ebirdst</code></a>, load those data into R and make a simple map.</p>
 </div>
-<div id="intro" class="section level2">
+<div id="intro" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Introduction</h2>
 <p><a href="https://ebird.org/science/status-and-trends">eBird Status and Trends</a> provides modeled estimates of the distribution and relative abundance of 610 North American breeding bird species over their full annual cycle at high spatial and temporal resolution. All the data behind the maps you’ve likely seen online are freely and openly available, hosted by the <a href="https://registry.opendata.aws/ebirdst/">Registry of Open Data on AWS</a>. In addition to being able to download the data from AWS, we maintain the <code>ebirdst</code> R package for easily accessing and working with these data. In this lesson, we’ll show you how to access these data and load them into your R session.</p>
 <p>Let’s start by loading the <code>ebirdst</code> R package and some additional packages for working with the data.</p>
@@ -201,30 +207,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-2"><a href="access.html#cb2-2"></a><span class="kw">library</span>(raster)</span>
 <span id="cb2-3"><a href="access.html#cb2-3"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
 </div>
-<div id="species" class="section level2">
+<div id="species" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Species list</h2>
 <p>The <code>ebirdst_runs</code> object is a data frame listing all the available species.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="access.html#cb3-1"></a><span class="kw">glimpse</span>(ebirdst_runs)</span>
 <span id="cb3-2"><a href="access.html#cb3-2"></a><span class="co">#&gt; Rows: 610</span></span>
 <span id="cb3-3"><a href="access.html#cb3-3"></a><span class="co">#&gt; Columns: 14</span></span>
-<span id="cb3-4"><a href="access.html#cb3-4"></a><span class="co">#&gt; $ species_code                    &lt;chr&gt; &quot;bbwduc&quot;, &quot;fuwduc&quot;, &quot;empgoo&quot;, &quot;snogoo&quot;, &quot;rosgoo&quot;, &quot;gwfgoo&quot;…</span></span>
-<span id="cb3-5"><a href="access.html#cb3-5"></a><span class="co">#&gt; $ run_name                        &lt;chr&gt; &quot;bbwduc-ERD2018-EBIRD_SCIENCE-20191105-dc3957b5&quot;, &quot;fuwduc-…</span></span>
-<span id="cb3-6"><a href="access.html#cb3-6"></a><span class="co">#&gt; $ scientific_name                 &lt;chr&gt; &quot;Dendrocygna autumnalis&quot;, &quot;Dendrocygna bicolor&quot;, &quot;Anser ca…</span></span>
-<span id="cb3-7"><a href="access.html#cb3-7"></a><span class="co">#&gt; $ common_name                     &lt;chr&gt; &quot;Black-bellied Whistling-Duck&quot;, &quot;Fulvous Whistling-Duck&quot;, …</span></span>
-<span id="cb3-8"><a href="access.html#cb3-8"></a><span class="co">#&gt; $ breeding_start_dt               &lt;date&gt; 2018-05-24, 2018-05-10, 2018-05-24, 2018-06-07, NA, 2018-…</span></span>
-<span id="cb3-9"><a href="access.html#cb3-9"></a><span class="co">#&gt; $ breeding_end_dt                 &lt;date&gt; 2018-08-03, 2018-08-17, 2018-06-21, 2018-08-17, NA, 2018-…</span></span>
-<span id="cb3-10"><a href="access.html#cb3-10"></a><span class="co">#&gt; $ nonbreeding_start_dt            &lt;date&gt; 2018-01-18, 2018-11-30, NA, 2018-12-28, 2018-12-14, 2018-…</span></span>
-<span id="cb3-11"><a href="access.html#cb3-11"></a><span class="co">#&gt; $ nonbreeding_end_dt              &lt;date&gt; 2018-03-01, 2018-02-15, NA, 2018-01-11, 2018-01-11, 2018-…</span></span>
-<span id="cb3-12"><a href="access.html#cb3-12"></a><span class="co">#&gt; $ postbreeding_migration_start_dt &lt;date&gt; 2018-08-10, 2018-08-24, NA, 2018-08-24, 2018-09-07, 2018-…</span></span>
-<span id="cb3-13"><a href="access.html#cb3-13"></a><span class="co">#&gt; $ postbreeding_migration_end_dt   &lt;date&gt; 2018-01-11, 2018-11-23, NA, 2018-12-21, 2018-12-07, 2018-…</span></span>
-<span id="cb3-14"><a href="access.html#cb3-14"></a><span class="co">#&gt; $ prebreeding_migration_start_dt  &lt;date&gt; 2018-03-08, 2018-02-22, NA, 2018-01-18, 2018-01-18, 2018-…</span></span>
-<span id="cb3-15"><a href="access.html#cb3-15"></a><span class="co">#&gt; $ prebreeding_migration_end_dt    &lt;date&gt; 2018-05-17, 2018-05-03, NA, 2018-05-31, 2018-05-17, 2018-…</span></span>
-<span id="cb3-16"><a href="access.html#cb3-16"></a><span class="co">#&gt; $ year_round_start_dt             &lt;date&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, 2018-01-04, NA, NA, 2…</span></span>
-<span id="cb3-17"><a href="access.html#cb3-17"></a><span class="co">#&gt; $ year_round_end_dt               &lt;date&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, 2018-12-28, NA, NA, 2…</span></span></code></pre></div>
+<span id="cb3-4"><a href="access.html#cb3-4"></a><span class="co">#&gt; $ species_code                    &lt;chr&gt; &quot;bbwduc&quot;, &quot;fuwduc&quot;, &quot;empgoo&quot;, &quot;snogoo&quot;, &quot;rosgoo&quot;, &quot;gwfgoo&quot;, &quot;brant&quot;, &quot;c…</span></span>
+<span id="cb3-5"><a href="access.html#cb3-5"></a><span class="co">#&gt; $ run_name                        &lt;chr&gt; &quot;bbwduc-ERD2018-EBIRD_SCIENCE-20191105-dc3957b5&quot;, &quot;fuwduc-ERD2018-EBIRD…</span></span>
+<span id="cb3-6"><a href="access.html#cb3-6"></a><span class="co">#&gt; $ scientific_name                 &lt;chr&gt; &quot;Dendrocygna autumnalis&quot;, &quot;Dendrocygna bicolor&quot;, &quot;Anser canagicus&quot;, &quot;An…</span></span>
+<span id="cb3-7"><a href="access.html#cb3-7"></a><span class="co">#&gt; $ common_name                     &lt;chr&gt; &quot;Black-bellied Whistling-Duck&quot;, &quot;Fulvous Whistling-Duck&quot;, &quot;Emperor Goos…</span></span>
+<span id="cb3-8"><a href="access.html#cb3-8"></a><span class="co">#&gt; $ breeding_start_dt               &lt;date&gt; 2018-05-24, 2018-05-10, 2018-05-24, 2018-06-07, NA, 2018-06-14, 2018-0…</span></span>
+<span id="cb3-9"><a href="access.html#cb3-9"></a><span class="co">#&gt; $ breeding_end_dt                 &lt;date&gt; 2018-08-03, 2018-08-17, 2018-06-21, 2018-08-17, NA, 2018-08-17, 2018-0…</span></span>
+<span id="cb3-10"><a href="access.html#cb3-10"></a><span class="co">#&gt; $ nonbreeding_start_dt            &lt;date&gt; 2018-01-18, 2018-11-30, NA, 2018-12-28, 2018-12-14, 2018-12-14, 2018-1…</span></span>
+<span id="cb3-11"><a href="access.html#cb3-11"></a><span class="co">#&gt; $ nonbreeding_end_dt              &lt;date&gt; 2018-03-01, 2018-02-15, NA, 2018-01-11, 2018-01-11, 2018-01-18, 2018-0…</span></span>
+<span id="cb3-12"><a href="access.html#cb3-12"></a><span class="co">#&gt; $ postbreeding_migration_start_dt &lt;date&gt; 2018-08-10, 2018-08-24, NA, 2018-08-24, 2018-09-07, 2018-08-24, 2018-0…</span></span>
+<span id="cb3-13"><a href="access.html#cb3-13"></a><span class="co">#&gt; $ postbreeding_migration_end_dt   &lt;date&gt; 2018-01-11, 2018-11-23, NA, 2018-12-21, 2018-12-07, 2018-12-07, 2018-1…</span></span>
+<span id="cb3-14"><a href="access.html#cb3-14"></a><span class="co">#&gt; $ prebreeding_migration_start_dt  &lt;date&gt; 2018-03-08, 2018-02-22, NA, 2018-01-18, 2018-01-18, 2018-01-25, 2018-0…</span></span>
+<span id="cb3-15"><a href="access.html#cb3-15"></a><span class="co">#&gt; $ prebreeding_migration_end_dt    &lt;date&gt; 2018-05-17, 2018-05-03, NA, 2018-05-31, 2018-05-17, 2018-06-07, 2018-0…</span></span>
+<span id="cb3-16"><a href="access.html#cb3-16"></a><span class="co">#&gt; $ year_round_start_dt             &lt;date&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, 2018-01-04, NA, NA, 2018-01-04, 20…</span></span>
+<span id="cb3-17"><a href="access.html#cb3-17"></a><span class="co">#&gt; $ year_round_end_dt               &lt;date&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, 2018-12-28, NA, NA, 2018-12-28, 20…</span></span></code></pre></div>
 <p>If you’re working in RStudio, you can use <code>View()</code> to interactively explore this data frame. You can also consult the <a href="https://ebird.org/science/status-and-trends">Status and Trends</a> landing page to see the full list of species.</p>
 <p>These seasonal dates are defined through a process of expert review of the weekly Status and Trends maps and define the start and end weeks of each of the following seasons: breeding, non-breeding, pre-breeding migration, and post-breeding migration. If dates are missing for a given season, it means the species did not pass the review process for that season.</p>
 </div>
-<div id="dl" class="section level2">
+<div id="dl" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> Download data</h2>
 <p>The function <code>ebirdst_download()</code> downloads data for a single species from AWS. All you need to do is provide the name (common name, scientific name, or species code) of the species you want to download. For this example, I’ll download the data for Loggerhead Shrike.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="access.html#cb4-1"></a>sp_path &lt;-<span class="st"> </span><span class="kw">ebirdst_download</span>(<span class="dt">species =</span> <span class="st">&quot;Loggerhead Shrike&quot;</span>)</span>
@@ -235,24 +241,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-2"><a href="access.html#cb6-2"></a><span class="co">#&gt;  [1] &quot;data/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_config.rds&quot;                                                   </span></span>
 <span id="cb6-3"><a href="access.html#cb6-3"></a><span class="co">#&gt;  [2] &quot;data/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_srd_raster_template.tif&quot;                                      </span></span>
 <span id="cb6-4"><a href="access.html#cb6-4"></a><span class="co">#&gt;  [3] &quot;data/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_test-data.csv&quot;                                                </span></span>
-<span id="cb6-5"><a href="access.html#cb6-5"></a><span class="co">#&gt;  [4] &quot;results/preds/test_pred_ave.txt&quot;                                                                                  </span></span>
-<span id="cb6-6"><a href="access.html#cb6-6"></a><span class="co">#&gt;  [5] &quot;results/stixels/pi.txt&quot;                                                                                           </span></span>
-<span id="cb6-7"><a href="access.html#cb6-7"></a><span class="co">#&gt;  [6] &quot;results/stixels/summary.txt&quot;                                                                                      </span></span>
-<span id="cb6-8"><a href="access.html#cb6-8"></a><span class="co">#&gt;  [7] &quot;results/tifs/band_dates.csv&quot;                                                                                      </span></span>
-<span id="cb6-9"><a href="access.html#cb6-9"></a><span class="co">#&gt;  [8] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_lower.tif&quot;                          </span></span>
-<span id="cb6-10"><a href="access.html#cb6-10"></a><span class="co">#&gt;  [9] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_median.tif&quot;                         </span></span>
-<span id="cb6-11"><a href="access.html#cb6-11"></a><span class="co">#&gt; [10] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_seasonal_breeding.tif&quot;              </span></span>
-<span id="cb6-12"><a href="access.html#cb6-12"></a><span class="co">#&gt; [11] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_seasonal_nonbreeding.tif&quot;           </span></span>
-<span id="cb6-13"><a href="access.html#cb6-13"></a><span class="co">#&gt; [12] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_seasonal_postbreeding_migration.tif&quot;</span></span>
-<span id="cb6-14"><a href="access.html#cb6-14"></a><span class="co">#&gt; [13] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_seasonal_prebreeding_migration.tif&quot; </span></span>
-<span id="cb6-15"><a href="access.html#cb6-15"></a><span class="co">#&gt; [14] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_upper.tif&quot;                          </span></span>
-<span id="cb6-16"><a href="access.html#cb6-16"></a><span class="co">#&gt; [15] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_yearround.tif&quot;                      </span></span>
-<span id="cb6-17"><a href="access.html#cb6-17"></a><span class="co">#&gt; [16] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_count_median.tif&quot;                             </span></span>
-<span id="cb6-18"><a href="access.html#cb6-18"></a><span class="co">#&gt; [17] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_occurrence_median.tif&quot;</span></span></code></pre></div>
+<span id="cb6-5"><a href="access.html#cb6-5"></a><span class="co">#&gt;  [4] &quot;logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13.json&quot;                                                              </span></span>
+<span id="cb6-6"><a href="access.html#cb6-6"></a><span class="co">#&gt;  [5] &quot;results/preds/test_pred_ave.txt&quot;                                                                                  </span></span>
+<span id="cb6-7"><a href="access.html#cb6-7"></a><span class="co">#&gt;  [6] &quot;results/stixels/pi.txt&quot;                                                                                           </span></span>
+<span id="cb6-8"><a href="access.html#cb6-8"></a><span class="co">#&gt;  [7] &quot;results/stixels/summary.txt&quot;                                                                                      </span></span>
+<span id="cb6-9"><a href="access.html#cb6-9"></a><span class="co">#&gt;  [8] &quot;results/tifs/band_dates.csv&quot;                                                                                      </span></span>
+<span id="cb6-10"><a href="access.html#cb6-10"></a><span class="co">#&gt;  [9] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_lower.tif&quot;                          </span></span>
+<span id="cb6-11"><a href="access.html#cb6-11"></a><span class="co">#&gt; [10] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_median.tif&quot;                         </span></span>
+<span id="cb6-12"><a href="access.html#cb6-12"></a><span class="co">#&gt; [11] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_seasonal_breeding.tif&quot;              </span></span>
+<span id="cb6-13"><a href="access.html#cb6-13"></a><span class="co">#&gt; [12] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_seasonal_nonbreeding.tif&quot;           </span></span>
+<span id="cb6-14"><a href="access.html#cb6-14"></a><span class="co">#&gt; [13] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_seasonal_postbreeding_migration.tif&quot;</span></span>
+<span id="cb6-15"><a href="access.html#cb6-15"></a><span class="co">#&gt; [14] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_seasonal_prebreeding_migration.tif&quot; </span></span>
+<span id="cb6-16"><a href="access.html#cb6-16"></a><span class="co">#&gt; [15] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_upper.tif&quot;                          </span></span>
+<span id="cb6-17"><a href="access.html#cb6-17"></a><span class="co">#&gt; [16] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_abundance_yearround.tif&quot;                      </span></span>
+<span id="cb6-18"><a href="access.html#cb6-18"></a><span class="co">#&gt; [17] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_count_median.tif&quot;                             </span></span>
+<span id="cb6-19"><a href="access.html#cb6-19"></a><span class="co">#&gt; [18] &quot;results/tifs/logshr-ERD2018-EBIRD_SCIENCE-20191029-48417b13_hr_2018_occurrence_median.tif&quot;</span></span></code></pre></div>
 <p>There are some additional files that can be downloaded by specifying <code>tifs_only = FALSE</code>, which may be useful for certain applications. For further details on these data consult the associated <code>ebirdst</code> <a href="https://cornelllabofornithology.github.io/ebirdst/articles/ebirdst-non-raster.html">vignette</a>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="access.html#cb7-1"></a>sp_path &lt;-<span class="st"> </span><span class="kw">ebirdst_download</span>(<span class="dt">species =</span> <span class="st">&quot;logshr&quot;</span>, <span class="dt">tifs_only =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
 </div>
-<div id="load" class="section level2">
+<div id="load" class="section level2" number="1.5">
 <h2><span class="header-section-number">1.5</span> Load data</h2>
 <p>Now that we’ve downloaded the data, let’s load these data into our R session. These are raster data (i.e. estimates are provided over a regular grid) and therefore we’ll need the <code>raster</code> package (loaded above) to work with them. There are a variety of layers available, but let’s load the relative abundance estimates. To learn about some of the other layers, consult the <a href="https://cornelllabofornithology.github.io/ebirdst/articles/ebirdst-introduction.html#raster-data-1">associated vignette</a> from the <code>ebirdst</code> package.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="access.html#cb8-1"></a>abd &lt;-<span class="st"> </span><span class="kw">load_raster</span>(<span class="dt">product =</span> <span class="st">&quot;abundance&quot;</span>, <span class="dt">path =</span> sp_path)</span>
@@ -267,14 +274,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-10"><a href="access.html#cb8-10"></a><span class="co">#&gt; max values :        3.08,        3.04,        3.29,        3.31,        3.32,        3.32,        3.31,        3.09,        2.89,        2.53,        2.71,        2.20,        2.23,        2.34,        2.11, ...</span></span></code></pre></div>
 <p>This is a <code>RasterStack</code> object with 52 layers, each providing a relative abundance estimate for a single week of the year. To see the dates corresponding to the midpoint of these weeks, use:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="access.html#cb9-1"></a><span class="kw">parse_raster_dates</span>(abd)</span>
-<span id="cb9-2"><a href="access.html#cb9-2"></a><span class="co">#&gt;  [1] &quot;2018-01-04&quot; &quot;2018-01-11&quot; &quot;2018-01-18&quot; &quot;2018-01-25&quot; &quot;2018-02-01&quot; &quot;2018-02-08&quot; &quot;2018-02-15&quot;</span></span>
-<span id="cb9-3"><a href="access.html#cb9-3"></a><span class="co">#&gt;  [8] &quot;2018-02-22&quot; &quot;2018-03-01&quot; &quot;2018-03-08&quot; &quot;2018-03-15&quot; &quot;2018-03-22&quot; &quot;2018-03-29&quot; &quot;2018-04-05&quot;</span></span>
-<span id="cb9-4"><a href="access.html#cb9-4"></a><span class="co">#&gt; [15] &quot;2018-04-12&quot; &quot;2018-04-19&quot; &quot;2018-04-26&quot; &quot;2018-05-03&quot; &quot;2018-05-10&quot; &quot;2018-05-17&quot; &quot;2018-05-24&quot;</span></span>
-<span id="cb9-5"><a href="access.html#cb9-5"></a><span class="co">#&gt; [22] &quot;2018-05-31&quot; &quot;2018-06-07&quot; &quot;2018-06-14&quot; &quot;2018-06-21&quot; &quot;2018-06-28&quot; &quot;2018-07-06&quot; &quot;2018-07-13&quot;</span></span>
-<span id="cb9-6"><a href="access.html#cb9-6"></a><span class="co">#&gt; [29] &quot;2018-07-20&quot; &quot;2018-07-27&quot; &quot;2018-08-03&quot; &quot;2018-08-10&quot; &quot;2018-08-17&quot; &quot;2018-08-24&quot; &quot;2018-08-31&quot;</span></span>
-<span id="cb9-7"><a href="access.html#cb9-7"></a><span class="co">#&gt; [36] &quot;2018-09-07&quot; &quot;2018-09-14&quot; &quot;2018-09-21&quot; &quot;2018-09-28&quot; &quot;2018-10-05&quot; &quot;2018-10-12&quot; &quot;2018-10-19&quot;</span></span>
-<span id="cb9-8"><a href="access.html#cb9-8"></a><span class="co">#&gt; [43] &quot;2018-10-26&quot; &quot;2018-11-02&quot; &quot;2018-11-09&quot; &quot;2018-11-16&quot; &quot;2018-11-23&quot; &quot;2018-11-30&quot; &quot;2018-12-07&quot;</span></span>
-<span id="cb9-9"><a href="access.html#cb9-9"></a><span class="co">#&gt; [50] &quot;2018-12-14&quot; &quot;2018-12-21&quot; &quot;2018-12-28&quot;</span></span></code></pre></div>
+<span id="cb9-2"><a href="access.html#cb9-2"></a><span class="co">#&gt;  [1] &quot;2018-01-04&quot; &quot;2018-01-11&quot; &quot;2018-01-18&quot; &quot;2018-01-25&quot; &quot;2018-02-01&quot; &quot;2018-02-08&quot; &quot;2018-02-15&quot; &quot;2018-02-22&quot;</span></span>
+<span id="cb9-3"><a href="access.html#cb9-3"></a><span class="co">#&gt;  [9] &quot;2018-03-01&quot; &quot;2018-03-08&quot; &quot;2018-03-15&quot; &quot;2018-03-22&quot; &quot;2018-03-29&quot; &quot;2018-04-05&quot; &quot;2018-04-12&quot; &quot;2018-04-19&quot;</span></span>
+<span id="cb9-4"><a href="access.html#cb9-4"></a><span class="co">#&gt; [17] &quot;2018-04-26&quot; &quot;2018-05-03&quot; &quot;2018-05-10&quot; &quot;2018-05-17&quot; &quot;2018-05-24&quot; &quot;2018-05-31&quot; &quot;2018-06-07&quot; &quot;2018-06-14&quot;</span></span>
+<span id="cb9-5"><a href="access.html#cb9-5"></a><span class="co">#&gt; [25] &quot;2018-06-21&quot; &quot;2018-06-28&quot; &quot;2018-07-06&quot; &quot;2018-07-13&quot; &quot;2018-07-20&quot; &quot;2018-07-27&quot; &quot;2018-08-03&quot; &quot;2018-08-10&quot;</span></span>
+<span id="cb9-6"><a href="access.html#cb9-6"></a><span class="co">#&gt; [33] &quot;2018-08-17&quot; &quot;2018-08-24&quot; &quot;2018-08-31&quot; &quot;2018-09-07&quot; &quot;2018-09-14&quot; &quot;2018-09-21&quot; &quot;2018-09-28&quot; &quot;2018-10-05&quot;</span></span>
+<span id="cb9-7"><a href="access.html#cb9-7"></a><span class="co">#&gt; [41] &quot;2018-10-12&quot; &quot;2018-10-19&quot; &quot;2018-10-26&quot; &quot;2018-11-02&quot; &quot;2018-11-09&quot; &quot;2018-11-16&quot; &quot;2018-11-23&quot; &quot;2018-11-30&quot;</span></span>
+<span id="cb9-8"><a href="access.html#cb9-8"></a><span class="co">#&gt; [49] &quot;2018-12-07&quot; &quot;2018-12-14&quot; &quot;2018-12-21&quot; &quot;2018-12-28&quot;</span></span></code></pre></div>
 <p>For a given week, these data consist of estimates of relative abundance over a regular 2.96 km grid. For example, we can extract just the 20th week (centered on May 17, 2018) with:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="access.html#cb10-1"></a>abd[[<span class="dv">20</span>]]</span>
 <span id="cb10-2"><a href="access.html#cb10-2"></a><span class="co">#&gt; class      : RasterLayer </span></span>
@@ -287,7 +293,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-9"><a href="access.html#cb10-9"></a><span class="co">#&gt; names      : X2018.05.17 </span></span>
 <span id="cb10-10"><a href="access.html#cb10-10"></a><span class="co">#&gt; values     : 0, 2.15  (min, max)</span></span></code></pre></div>
 </div>
-<div id="map" class="section level2">
+<div id="map" class="section level2" number="1.6">
 <h2><span class="header-section-number">1.6</span> Mapping</h2>
 <p>Let’s map a quick map of the May 17 abundance data to see what it looks like. The function <code>abundance_palette()</code> gives us access to the color palettes used in the online versions of the maps.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="access.html#cb11-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>))</span>
